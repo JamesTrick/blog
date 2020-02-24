@@ -7,20 +7,15 @@ fields:
   config:
     required: false
   label: Title
-- name: thumbnail
-  type: file
-  config:
-    maxSize: 250
-  hidden: true
-  label: Thumbnail
-- name: main_content
-  type: textarea
-  default: ''
+- name: date
+  type: datetime
+  label: Date
+  description: ''
   config:
     required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Main Content
+    date_format: 
+    time_format: 
+    display_utc: false
+  default: now
 pages:
 - content/posts/docker-machine-learning.md
