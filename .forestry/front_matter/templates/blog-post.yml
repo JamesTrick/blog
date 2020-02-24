@@ -2,16 +2,11 @@
 label: Blog Post
 hide_body: false
 fields:
-- name: heading
+- name: title
   type: text
   config:
     required: false
-  label: Heading
-- name: sub_heading
-  type: text
-  config:
-    required: false
-  label: Sub Heading
+  label: Title
 - name: thumbnail
   type: file
   config:
