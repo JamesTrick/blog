@@ -27,3 +27,5 @@ fields:
     schema:
       format: markdown
   label: Main Content
+pages:
+- content/posts/docker-machine-learning.md
