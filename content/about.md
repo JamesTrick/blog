@@ -13,4 +13,4 @@ I've always actively sought out new opportunities to improve things, which is sh
 
 Outside of work, I'm typically out on the rugby field refereeing rugby or out on my motorbikes. I’m passionate about working with data and technology to show the #human side and to change people's lives.
 
-[Feel free to reach out to me at any time!]()
+[Feel free to reach out to me at any time!](mailto:jcallinicos@gmail.com)
