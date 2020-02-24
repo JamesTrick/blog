@@ -1,4 +1,4 @@
-baseURL = "https://jamesmalcolm.me//"
+baseURL = "https://jamesmalcolm.me/"
 languageCode             = "en-us"
 defaultContentLanguage   = "en"
 isMultilingual           = false
