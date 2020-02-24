@@ -1,8 +1,7 @@
 +++
-draft = true
-heading = "James"
+heading = "Deploying Machine Learning Models with Docker"
 main_content = ""
-sub_heading = ""
+sub_heading = "Learn to create a production-ready API using nginx, gunicorn and Docker to serve your Machine Learning models."
 thumbnail = ""
 
 +++
@@ -54,6 +53,9 @@ The most logical starting point would be with our existing Flask application. Ou
 
 The only Flask-specific change we need to make is to ensure when we start Flask, that we specify a host of 0.0.0.0 and that we have `debug=False` .
 
+    if __name__ == '__main__':
+        app.run(host='0.0.0.0') # remove debug = True, or set to False.
+
 `debug=False` is important, as if the user encounters an error, we don’t want a Traceback to be shown. The host, simply helps us later down the track when we configure nginx.
 
 Before we create the Dockerfile, we first need to install gunicorn by simply running`pip install gunicorn` in your terminal. gunicorn itself will be configured later when we create the Docker Compose file.
@@ -64,7 +66,22 @@ BOOM! Now we move onto creating our Docker container. To create a Docker contain
 
 The Dockerfile below is relatively straight-forward. We leverage of an existing base-image with Python 3.6.2 already installed, then we make and copy our application folders into the container.
 
-You may notice, that we haven’t specificed `flask run` or any equivalent command in our Dockerfile. This is because we want to use gunicorn to start our Flask application. We also want to it to be started alongside our nginx container when. So we’ll be doing this when we configure Docker Compose later on.
+    FROM python:3.6.2
+    
+    # make directories suited to your application 
+    RUN mkdir -p /home/project/app
+    RUN mkdir -p /home/project/app/models
+    WORKDIR /home/project/app
+    
+    # copy and install packages for flask
+    COPY requirements.txt /home/project/app
+    RUN pip install --no-cache-dir -r requirements.txt
+    
+    # copy contents from your local to your docker container
+    COPY . /home/project/app
+    COPY ./models /home/project/app/models
+
+You may notice, that we haven’t specified `flask run` or any equivalent command in our Dockerfile. This is because we want to use gunicorn to start our Flask application. We also want to it to be started alongside our nginx container when. So we’ll be doing this when we configure Docker Compose later on.
 
 ### nginx
 
@@ -72,9 +89,33 @@ nginx in our case replaces the default Flask webserver and is a lot more scalabl
 
 We can set up nginx by creating a new directory within our project root, and creating a Dockerfile with the following:
 
+    FROM nginx:1.15.2
+    
+    RUN rm /etc/nginx/nginx.conf
+    COPY nginx.conf /etc/nginx/
+
 This pulls down the [nginx Docker image](https://hub.docker.com/_/nginx/) and simply copies `nginx.conf` into the Docker container.
 
 `nginx.conf` is the file where we can configure our nginx server, it looks something like below:
+
+    worker_processes  1;
+    
+    http {
+      
+      keepalive_timeout  65;
+      
+      server {
+          listen 80;
+    
+          location / {
+              proxy_pass http://0.0.0.0:8000;
+    
+              proxy_set_header Host $host;
+              proxy_set_header X-Real-IP $remote_addr;
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+          }
+      }
+    }
 
 The main parts to this, is that we set a keepalive_time out in seconds, and tell our proxy to listen on port 80 (http) and return localhost with a port of 8000.
 
@@ -82,7 +123,7 @@ The main parts to this, is that we set a keepalive_time out in seconds, and tell
 
 We now have the makings for a pretty good Flask API/Website. There’s really only one last thing to do.
 
-Since we have multiple Docker containers, we want a way to run both of them and specify how they interact with eachother. This is where [Docker Compose](https://docs.docker.com/compose/) comes in.
+Since we have multiple Docker containers, we want a way to run both of them and specify how they interact with each other. This is where [Docker Compose](https://docs.docker.com/compose/) comes in.
 
 > Compose is a tool for defining and running multi-container Docker applications.
 
@@ -95,6 +136,27 @@ From Docker’s website we can see that using Docker Compose is a three-step pro
 We’ve already completed step one, so now we can safely move on to step two.
 
 Our `docker-compose.yml` file looks like this:
+
+    version: '3'
+    
+    services:
+    
+      api:
+        container_name: api # Name can be anything
+        restart: always
+        build: ./api
+        ports:
+          - "8000:8000"
+        command: gunicorn -w 1 -b :8000 app:app
+    
+      nginx:
+        container_name: nginx
+        restart: always
+        build: ./nginx
+        ports:
+          - "8001:8001"
+        depends_on:
+          - api
 
 There are a few things to note about this file.
 
