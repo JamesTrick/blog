@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2020-02-24T15:15:21+13:00
-draft: true
+draft: false
 ---
 
 # Hi, I'm James.
