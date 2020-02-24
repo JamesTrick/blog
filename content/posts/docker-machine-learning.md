@@ -1,4 +1,5 @@
 +++
+date = 2020-02-24T03:19:00Z
 heading = "Deploying Machine Learning Models with Docker"
 main_content = ""
 sub_heading = "Learn to create a production-ready API using nginx, gunicorn and Docker to serve your Machine Learning models."
