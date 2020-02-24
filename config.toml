@@ -1,4 +1,4 @@
-baseURL = "https://hugo.onrender.com"
+baseURL = "https://james-malcolm-blog.onrender.com/"
 languageCode             = "en-us"
 defaultContentLanguage   = "en"
 isMultilingual           = false
@@ -6,13 +6,13 @@ title                    = "Call me James"
 theme                    = "sam"
 pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
 pygmentsCodefences       = true
-# googleAnalytics        = ""                               # Tracking code, eg. "UA-111111111-1"
+googleAnalytics        = "UA-158965144-1"                               # Tracking code, eg. "UA-111111111-1"
 
 [params]
     dateform             = "Mon Jan 02, 2006"
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
-    homepage             = "home"                           # What to call the home page link
-    footerText           = "Call me Sam, a theme for Hugo."
+    homepage             = "home"
+    footerText           = "James Malcolm. Copyright 2020."
 
 # Metadata for Open Graph and Twitter
     description          = "A new Hugo site."               # Max 160 characters show in search results
@@ -33,7 +33,7 @@ pygmentsCodefences       = true
 
 [[params.mainMenu]]
     link = "/about"
-    text = "who is sam?"
+    text = "who am i?"
 
 [imaging]
     quality = 75
