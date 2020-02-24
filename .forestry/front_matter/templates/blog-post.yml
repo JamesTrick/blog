@@ -1,4 +1,29 @@
 ---
 label: Blog Post
 hide_body: false
-fields: []
+fields:
+- name: heading
+  type: text
+  config:
+    required: false
+  label: Heading
+- name: sub_heading
+  type: text
+  config:
+    required: false
+  label: Sub Heading
+- name: thumbnail
+  type: file
+  config:
+    maxSize: 250
+  hidden: true
+  label: Thumbnail
+- name: main_content
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Main Content
