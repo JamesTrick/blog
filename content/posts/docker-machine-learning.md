@@ -3,6 +3,7 @@ heading = "Deploying Machine Learning Models with Docker"
 main_content = ""
 sub_heading = "Learn to create a production-ready API using nginx, gunicorn and Docker to serve your Machine Learning models."
 thumbnail = ""
+title = "Deploying Machine Learning Models with Docker"
 
 +++
 There are a lot of articles out there explaining how to wrap Flask around your machine learning models to serve them as a RESTful API. This article extends that by explaining how to productionize your Flask API and get it ready for deployment using Docker.
