@@ -10,7 +10,9 @@ For budget managers and shareholders alike it’s interesting and beneficial to 
 
 A good start would be to look at how some of the largest US listed Software companies split their spending between S&M and R&D.
 
-This plot below illustrates that there is a large range of spending choices, right from Square through to Splunk.![](https://lh6.googleusercontent.com/iZt0x_DTtIhh22ZZpacpdyDgM24QDMtt1m0ON6c5VLsBWvKVqeUuxOS2CvMyb4PZQblGwRebLtW_VqTuY-6Md3K2nbVmH9wEt-TSY6aI0QKNQ1jbLMn_l3XZ3uu_p9SUi5EESCI6 =357x425)
+This plot below illustrates that there is a large range of spending choices, right from Square through to Splunk.
+
+![](/content/static/graphs/Top_Companies-1.png)
 
 Notably, both PayPal and Square are companies that rely on being integrated as payment services by 3rd parties, which then allows them to earn a fee per transaction. This technique evidently requires less sales spend to produce high revenues.  
   
@@ -26,9 +28,9 @@ However, one can hypothesise that there might be a stage in a company’s life w
 
 ## **Sales and Marketing spend By Company Size**
 
-**![](https://lh6.googleusercontent.com/LpUj94FVyciaTNrE-5iUaY1-8PaAwyNFzgNWvrd4nYfOfAH5PFh4as3HgNHgEcpZ_vkXZmONb9FYa0f9QhJS0rLyHiX2M-jar175YYoBPGNV3zNIjZgYjFKftTVsZ4ggsHr7N051 =602x401)**
+As we're comparing companies in same industry it's fair to use Total Assets as a proxy for company size. Given this, when visualising Sales and Marketing spend against Total Assets, we can see that there is a weak negative relationship.
 
-When visualising Sales and Marketing spend against Total Assets, we can see that there is a weak negative relationship.
+![](/content/static/graphs/sm_expense-1.png)
 
 Despite the relationship being weak, we could infer that larger companies may spend less on Sales and Marketing. But there’s no big difference that I was looking for. Maybe Henry Ford was right when [he famously once said](https://www.briansorce.com/10-marketing-quotes-henry-ford/): “A man who stops advertising to save money is like a man who stops a clock to save time.”
 
@@ -36,7 +38,7 @@ Despite the relationship being weak, we could infer that larger companies may sp
 
 Equally, on the R&D spend we see a weak relationship between R&D Spend and Assets, however this trend is positive and a slightly better fit.
 
-![](https://lh4.googleusercontent.com/ManMmUZg8gwqoA1-6U-CRbQvq73L1I0J9qAbraEdVGKmvrfYh9aU1lRvFxCJ-AVxnd_wW7FSfzK66p6owciy_UgpbNo_Gdi8-Ny8Rj9Je690Spae8NOVbJ2RSOKpFXsLUXNbdHuv =602x401)
+![](/content/static/graphs/rd_figure-1.png)
 
 By visualising data such as this, we can draw conclusions that smaller companies favour Sales and Marketing spend, perhaps in an attempt to increase their size or due to lack of resources.
 
