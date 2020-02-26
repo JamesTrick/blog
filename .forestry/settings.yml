@@ -17,7 +17,7 @@ sections:
 upload_dir: blog
 public_path: https://res.cloudinary.com/dtexqfeo4/image/upload/v1582685377/blog
 front_matter_path: ''
-use_front_matter_path: 
+use_front_matter_path: true
 file_template: ":filename:"
 build:
   preview_env:
