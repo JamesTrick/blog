@@ -14,8 +14,8 @@ sections:
   label: Posts
   create: all
   match: "**/*"
-upload_dir: static/graphs
-public_path: "/static/graphs"
+upload_dir: content/static/graphs
+public_path: "/content/static/graphs"
 front_matter_path: ''
 use_front_matter_path: true
 file_template: ":filename:"
