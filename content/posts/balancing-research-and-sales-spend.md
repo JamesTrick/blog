@@ -6,7 +6,7 @@ title = "Balancing Research and Sales Spend"
 +++
 Sales and Marketing (S&M) and Research and Development (R&D) are often competing for when it comes to company budgeting.
 
-When taking a look at some of the largest software companies, we can see the variability of spending to be quite variable. 
+When taking a look at some of the largest software companies, we can see the variability of spending to be quite variable.
 
 Notably, Paypal and Square, company's who rely on third parties integrating them as a payment service and earn a fee per transaction evidently require less Sales spend to get high revenues.
 
@@ -18,7 +18,7 @@ It does give you an insight into a company’s strategy, notably ServiceNow and 
 
 If we were to run a regression against incremental change in Revenue only using incremental change in R&D and S&M spend solely we get an impressive R^2 of 0.57, meaning that 57% of variance in revenue can be explained solely to S&M and R&D.
 
-There’s no real doubt that R&D and S&M are good, both proved by the model and also intuition. 
+There’s no real doubt that R&D and S&M are good, both proved by the model and also intuition.
 
 However, one can hypothesise that there might be a stage in a company’s life where one more important than others?
 
