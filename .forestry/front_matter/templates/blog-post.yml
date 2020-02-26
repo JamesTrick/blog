@@ -22,5 +22,6 @@ fields:
   default: []
   label: Tags
 pages:
+- content/posts/balancing-research-and-sales-spend.md
 - content/posts/classifying-german-text-with-pytorch.md
 - content/posts/docker-machine-learning.md
