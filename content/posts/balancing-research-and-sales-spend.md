@@ -25,5 +25,3 @@ However, one can hypothesise that there might be a stage in a company’s life w
 As we're looking not comparing against industries, and for simplicity we can use Total Assets as a proxy for the size of a company.
 
 ![](/v1582683168/blog/test_ee3eta.png)
-
-To answer to thisthere a stage in a company’s life where one is more important than the other?
