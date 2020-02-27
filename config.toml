@@ -3,7 +3,7 @@ languageCode             = "en-us"
 defaultContentLanguage   = "en"
 isMultilingual           = false
 title                    = "Call me James"
-theme                    = "sam"
+theme                    = "james"
 pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
 pygmentsCodefences       = true
 googleAnalytics        = "UA-158965144-1"                               # Tracking code, eg. "UA-111111111-1"
@@ -23,13 +23,13 @@ googleAnalytics        = "UA-158965144-1"                               # Tracki
     link = "/posts"
     text = "posts"
 
-[[params.mainMenu]]
-    link = "/gallery"
-    text = "gallery"
+#[[params.mainMenu]]
+#    link = "/gallery"
+#    text = "gallery"
 
-[[params.mainMenu]]
-    link = "/portfolio"
-    text = "portfolio"
+#[[params.mainMenu]]
+#    link = "/portfolio"
+#    text = "portfolio"
 
 [[params.mainMenu]]
     link = "/about"
