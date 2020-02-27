@@ -23,13 +23,13 @@ googleAnalytics        = "UA-158965144-1"                               # Tracki
     link = "/posts"
     text = "posts"
 
-[[params.mainMenu]]
-    link = "/gallery"
-    text = "gallery"
+#[[params.mainMenu]]
+#    link = "/gallery"
+#    text = "gallery"
 
-[[params.mainMenu]]
-    link = "/portfolio"
-    text = "portfolio"
+#[[params.mainMenu]]
+#    link = "/portfolio"
+#    text = "portfolio"
 
 [[params.mainMenu]]
     link = "/about"
