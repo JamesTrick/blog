@@ -1,5 +1,5 @@
 +++
-date = 2020-03-11T05:15:00Z
+date = 2020-03-11T04:15:00Z
 tags = ["stocks", "analysis", "sales"]
 title = "Achieving Gross Margin"
 
