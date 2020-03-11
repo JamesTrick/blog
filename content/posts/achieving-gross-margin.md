@@ -12,7 +12,7 @@ In my [last article](https://jamesmalcolm.me/posts/balancing-research-and-sales-
 
 ## **Does Above Gross Margin lead to Stock Success?**
 
-![Graph showing Stock returns of US Software Companies compared to Gross Margin](/static/graphs/grossmargin-gm_byStockPrice.png)
+![Graph showing Stock returns of US Software Companies compared to Gross Margin](/static/graphs/grossmargin-gm_byStockPrice-1.png)
 
 To answer this simply, if we simply plot Stock Returns against Gross Margin and run a simple linear regression, we can see that there’s no relationship between Gross Margin and stock returns. Absolutely none - R^2 of 0.
 
