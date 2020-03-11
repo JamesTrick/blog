@@ -12,7 +12,7 @@ In my [last article](https://jamesmalcolm.me/posts/balancing-research-and-sales-
 
 ## **Does Above Gross Margin lead to Stock Success?**
 
-![Graph showing Stock returns of US Software Companies compared to Gross Margin](https://lh6.googleusercontent.com/yRT3-RxI9VcBOE1Wr3Bu-K_jDzcVIZvhJAcK0b0R7neOsZtG7RAOHfKT9hKfsSSw8EYD0eFok54LcwwVJlgj7L29vFyvEegURwbTdLPxNwWpyxxzknL6bH5z-UMn6pCUVoJqV7yq =624x416)
+![Graph showing Stock returns of US Software Companies compared to Gross Margin](/static/graphs/grossmargin-gm_byStockPrice.png)
 
 To answer this simply, if we simply plot Stock Returns against Gross Margin and run a simple linear regression, we can see that there’s no relationship between Gross Margin and stock returns. Absolutely none - R^2 of 0.
 
@@ -25,7 +25,7 @@ In the last article, we explored the relationship between Sales and Marketing ex
 
 I modelled in my last article that both R&D and S&M spend contributes positively to increasing top-line revenue, so I was intrigued to see the spread of S&M and Gross margin.
 
-![Stock showing positive diminishing relationship between Gross Margin and Sales and Marketing Spend amongst US companies.](https://lh5.googleusercontent.com/WS62HIEJhwSRYo5T-EPfyG2axM9AFNRveIOnZCjcaQvt_iN1U02DEaK87EC_qeBlnoM1QnEsFoukpawvm8X5tlTLFJt45LWSKZic11sT4W2rSGnnlnYZC9qGAZ-UGcjIyNxJvW63 =624x416)
+![Stock showing positive diminishing relationship between Gross Margin and Sales and Marketing Spend amongst US companies.](/static/graphs/grossmargin-snga_by_gm.png)
 
 Again, making a simple plot we can see that there is a positive relationship between S&M spend and Gross margin, albeit diminishing returns style. This intuitively makes sense.
 
