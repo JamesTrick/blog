@@ -1,7 +1,5 @@
-# Deploy Hugo on Render
+# James Malcolm Blog
 
-This is the [Hugo Quick Start](https://gohugo.io/getting-started/quick-start/) example deployed at https://hugo.onrender.com.
+This is the repo for [jamesmalcolm.me](https://jamesmalcolm.me/). It's a simple static site that is generated using Hugo and deployed on Render.
 
-## Deploying
-
-See instructions at https://render.com/docs/deploy-hugo.
+All Blog analysis/notebooks of analysis are located in a [dedicated repo](https://github.com/JamesTrick/blog_analysis).
