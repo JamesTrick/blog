@@ -30,15 +30,13 @@ However, one can hypothesise that there might be a stage in a company’s life w
 
 As we're comparing companies in same industry it's fair to use Total Assets as a proxy for company size. Given this, when visualising Sales and Marketing spend against Total Assets, we can see that there is a weak negative relationship.
 
-![](/static/graphs/sm_expense-1.png)
-
-Despite the relationship being weak, we could infer that larger companies may spend less on Sales and Marketing. But there’s no big difference that I was looking for. Maybe Henry Ford was right when [he famously once said](https://www.briansorce.com/10-marketing-quotes-henry-ford/): “A man who stops advertising to save money is like a man who stops a clock to save time.”
+![](/static/graphs/sm_expense.png)Despite the relationship being weak, we could infer that larger companies may spend less on Sales and Marketing. But there’s no big difference that I was looking for. Maybe Henry Ford was right when [he famously once said](https://www.briansorce.com/10-marketing-quotes-henry-ford/): “A man who stops advertising to save money is like a man who stops a clock to save time.”
 
 ## **Research and Development spend by Company Size**
 
 Equally, on the R&D spend we see a weak relationship between R&D Spend and Assets, however this trend is positive and a slightly better fit.
 
-![](/static/graphs/rd_figure-1.png)
+![](/static/graphs/rd_figure.png)
 
 By visualising data such as this, we can draw conclusions that smaller companies favour Sales and Marketing spend, perhaps in an attempt to increase their size or due to lack of resources.
 
