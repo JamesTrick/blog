@@ -1,5 +1,6 @@
 +++
 date = 2020-04-06T06:14:20Z
+draft = true
 tags = []
 title = "Bayesian AB Testing with Pyro"
 
@@ -12,7 +13,7 @@ As a result, my desire and my stakeholder’s desire were to capture small gains
 
 Because of this, I chose Bayesian AB Testing as a measurement framework. Literature on Bayesian AB testing is readily available, so I won’t go into a lot of detail explaining how it works. This post, by Dynamic Yield explains it quite well.
 
-Instead, we’ll start with a quote from Dynamic Yield on Bayesian AB testing: 
+Instead, we’ll start with a quote from Dynamic Yield on Bayesian AB testing:
 
 > _“The math behind the Bayesian framework is quite complex so I will not get into it here. In fact, I would argue that the fact that the math is more complicated than can be computed with a simple calculator or Microsoft Excel is a dominant factor in the slow adoption of this method in the industry.”_
 
