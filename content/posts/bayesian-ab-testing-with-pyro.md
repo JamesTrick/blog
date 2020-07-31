@@ -1,6 +1,5 @@
 +++
 date = 2020-04-06T06:14:20Z
-draft = true
 tags = []
 title = "Bayesian AB Testing with Pyro"
 
@@ -56,3 +55,17 @@ Breaking it down, Pyro's models look like regular python functions.
 \[Graph of different Betas\]
 
 Differences measures the expected difference between the performance of `prior_`_`v2` when compared to `prior`_`_v1`.
+
+We can now condition our model to find the true values of prior_v1, prior_v2 but more importantly yield those helpful insights.
+
+To do this, we'll use Markov Chain Monte Carlo
+
+    nuts = NUTS(ab_model, adapt_step_size=True)
+    
+    mcmc = MCMC(nuts, num_samples=3000, warmup_steps=200)
+    mcmc.run(torch.tensor(obs_v1, dtype=torch.double),
+             torch.tensor(obs_v2, dtype=torch.double),
+            torch.tensor(n_1, dtype=torch.double),
+            torch.tensor(n_2, dtype=torch.double))
+
+The mechanics behind MCMC is again be
