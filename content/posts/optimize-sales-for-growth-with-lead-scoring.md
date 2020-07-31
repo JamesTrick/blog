@@ -1,5 +1,6 @@
 +++
 date = 2020-07-31T00:04:00Z
+draft = true
 tags = ["sales", "data"]
 title = "Optimize Sales For Growth with Lead Scoring"
 
