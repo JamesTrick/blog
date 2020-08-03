@@ -90,7 +90,7 @@ Despite all the above, lead scores are limited in their usefulness. Their reach 
 
 Lead scoring can help identify these people and are great for optimizing sales volume with a slimmed resource. But, you may find that whilst sales volume increases, average revenue (ARPU) decreases.
 
-The easiest way to handle this would be to think of a 2 model approach. This idea is more formalized in X paper.
+The easiest way to handle this would be to think of a 2 model approach. This idea is more formalized in [this paper](https://www.researchgate.net/publication/299969952_Probabilistic_Modeling_of_a_Sales_Funnel_to_Prioritize_Leads).
 
 Another caveat is that lead scoring normally represents leads as if nothing happened to them - that is, no additional campaigns or interventions take place. This, of course, isn’t normally the case, and looking to re-frame your lead score to examine probability of converting given the campaign is an excellent way to go beyond a simple lead score.
 
