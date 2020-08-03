@@ -1,5 +1,5 @@
 +++
-date = 2020-07-31T00:04:00Z
+date = 2020-08-03T06:12:00Z
 tags = ["sales", "data", "analytics", "lead-scoring"]
 title = "Optimize Sales For Growth with Lead Scoring"
 
