@@ -69,4 +69,4 @@ To do this, we'll use Markov Chain Monte Carlo
             torch.tensor(n_1, dtype=torch.double),
             torch.tensor(n_2, dtype=torch.double))
 
-The mechanics behind MCMC is again be
+The mechanics behind MCMC is again be 
