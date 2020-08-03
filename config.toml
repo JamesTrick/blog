@@ -34,5 +34,9 @@ googleAnalytics          = "UA-158965144-1"
     link = "/about"
     text = "who am i?"
 
+[[params.mainMenu]]
+    link = "/contact"
+    text = "contact me"
+
 [imaging]
     quality = 75
