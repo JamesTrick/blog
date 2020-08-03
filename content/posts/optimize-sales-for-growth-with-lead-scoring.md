@@ -1,7 +1,6 @@
 +++
 date = 2020-07-31T00:04:00Z
-draft = true
-tags = ["sales", "data"]
+tags = ["sales", "data", "analytics", "lead-scoring"]
 title = "Optimize Sales For Growth with Lead Scoring"
 
 +++
@@ -9,7 +8,7 @@ title = "Optimize Sales For Growth with Lead Scoring"
 
 In home design TV shows, designers often place seemingly a lot of energy on the entry of the house. Why? Well it’s the place where you first show your home and create an impression.
 
-Sales teams are often the entrance way into their company. Creating a great sales experience will lead to higher conversions and create loyal customers. Companies are always trying to become more efficient. A key tool to increase sales efficiency is lead scoring.
+Sales teams often represent the entrance way into their company. Creating a great sales experience will lead to higher conversions and create loyal customers. Companies are always trying to become more efficient and a key tool to increase sales efficiency is lead scoring.
 
 In this post, we’ll cover:
 
@@ -20,7 +19,7 @@ In this post, we’ll cover:
 
 ## **So, what is lead scoring?**
 
-Lead scoring relates to the process of ranking prospects in terms of the sales-readiness, or willingness to convert or buy. Lead scores take many forms from a simple number or a probability. Whether a number or probability, the processes around lead scoring should be the same.
+[Marketo explains lead scoring](https://blog.marketo.com/2011/01/what-is-lead-scoring.html) as the process of ranking prospects in terms of the sales-readiness, or willingness to convert or buy. Lead scores take many forms from a simple number or a probability. Whether a number or probability, the processes around lead scoring should be the same.
 
 To be clear, lead scoring will not increase the number of prospects you have. But, it may well help you make the most out of your current prospects reducing the need to increase acquisition of more prospects. Specifically, Lead Scoring optimises the process of taking Marketing Qualified Leads through to Sales Qualified leads and ultimately successful sales.
 
@@ -40,7 +39,7 @@ However, similar styles of model can be used for pre-trial or e-commerce sites i
 
 A commonly held view is that lead scores work best in resource constrained sales environments -- a situation in which you have more leads than you or your sales team can handle. However, I believe lead scores are applicable to many companies, regardless of the size and resource level.
 
-If you operate in a resource constrained environment, a common use-case for a lead score would be to use it to identify what leads to contact vs what leads to disregard. I’ve written previously on the importance of[ Sales and Marketing spend](https://jamesmalcolm.me/posts/balancing-research-and-sales-spend/), in constrained environments it’s all about squeezing the most value out of sales.
+If you operate in a resource constrained environment, a common use-case for a lead score would be to use it to identify what leads to contact vs what leads to disregard. I’ve written previously on the importance of [Sales and Marketing spend](https://jamesmalcolm.me/posts/balancing-research-and-sales-spend/), in constrained environments it’s all about squeezing the most value out of sales.
 
 Lead scores can help salespeople focus their effects in two ways:
 
@@ -71,15 +70,15 @@ In Enterprise sales, the Job title of the person you’re talking to can be a us
 
 With these factors, to create a simple lead score, simply assign ‘points’ to each action that rank your prospects. For example:
 
-| --- | --- |
-| Action | Points |
-| Visits Homepage + 10 | 10 |
-| Visits pricing | 20 |
-| Signs up for trial | 50 |
-| Is from favourable market | 40 |
-|  |  |
+| Action                     | Point |
+|----------------------------|-------|
+| Visits Homepage            | + 10  |
+| Visits Pricing             | + 20  |
+| Starts a trial             | + 50  |
+| Is located in prime market | + 30  |
+| Opens marketing email      | + 10  |
 
-There are many great resources on building lead scores like this,[ Hubspot has a great guide which is applicable for many businesses](https://blog.hubspot.com/marketing/lead-scoring-instructions).
+There are many great resources on building lead scores like this, [Hubspot has a great guide which is applicable for many businesses](https://blog.hubspot.com/marketing/lead-scoring-instructions).
 
 Some general tips are:
 
@@ -97,4 +96,10 @@ The easiest way to handle this would be to think of a 2 model approach. This ide
 
 Another caveat is that lead scoring normally represents leads as if nothing happened to them - that is, no additional campaigns or interventions take place. This of course isn’t normally the case and looking to re-frame your lead score to look at probability of converting given the campaign is an excellent way to go beyond a simple lead score.
 
-In summary, lead scoring can be used in many businesses and doesn’t require a lot to start with. It’s a proven way to increase sales team efficiency and achieve growth.
+In summary, lead scoring can be used in many businesses and doesn’t require a lot to start with and is an interative process. It’s a proven way to increase sales team efficiency and achieve growth.
+
+---
+
+Do you want advice on your sales funnel and how lead scoring can be applicable?
+
+Feel free to reach out to me at: [jcallinicos@gmail.com](mailto:jcallinicos@gmail.com)
