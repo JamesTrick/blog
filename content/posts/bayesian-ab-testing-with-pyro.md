@@ -1,7 +1,6 @@
 +++
 date = 2020-04-06T06:14:20Z
 tags = []
-draft=true
 title = "Bayesian AB Testing with Pyro"
 
 +++
