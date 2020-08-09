@@ -56,8 +56,10 @@ The most logical starting point would be with our existing Flask application. Ou
 
 The only Flask-specific change we need to make is to ensure when we start Flask, that we specify a host of 0.0.0.0 and that we have `debug=False` .
 
-    if __name__ == '__main__':
-        app.run(host='0.0.0.0') # remove debug = True, or set to False.
+```python
+if __name__ == '__main__':
+    app.run(host='0.0.0.0') # remove debug = True, or set to False.
+```
 
 `debug=False` is important, as if the user encounters an error, we don’t want a Traceback to be shown. The host, simply helps us later down the track when we configure nginx.
 
@@ -69,20 +71,22 @@ BOOM! Now we move onto creating our Docker container. To create a Docker contain
 
 The Dockerfile below is relatively straight-forward. We leverage of an existing base-image with Python 3.6.2 already installed, then we make and copy our application folders into the container.
 
-    FROM python:3.6.2
-    
-    # make directories suited to your application 
-    RUN mkdir -p /home/project/app
-    RUN mkdir -p /home/project/app/models
-    WORKDIR /home/project/app
-    
-    # copy and install packages for flask
-    COPY requirements.txt /home/project/app
-    RUN pip install --no-cache-dir -r requirements.txt
-    
-    # copy contents from your local to your docker container
-    COPY . /home/project/app
-    COPY ./models /home/project/app/models
+```dockerfile
+FROM python:3.6
+
+# make directories suited to your application 
+RUN mkdir -p /home/project/app
+RUN mkdir -p /home/project/app/models
+WORKDIR /home/project/app
+
+# copy and install packages for flask
+COPY requirements.txt /home/project/app
+RUN pip install --no-cache-dir -r requirements.txt
+
+# copy contents from your local to your docker container
+COPY . /home/project/app
+COPY ./models /home/project/app/models
+```
 
 You may notice, that we haven’t specified `flask run` or any equivalent command in our Dockerfile. This is because we want to use gunicorn to start our Flask application. We also want to it to be started alongside our nginx container when. So we’ll be doing this when we configure Docker Compose later on.
 
@@ -92,10 +96,12 @@ nginx in our case replaces the default Flask webserver and is a lot more scalabl
 
 We can set up nginx by creating a new directory within our project root, and creating a Dockerfile with the following:
 
-    FROM nginx:1.15.2
-    
-    RUN rm /etc/nginx/nginx.conf
-    COPY nginx.conf /etc/nginx/
+```dockerfile
+FROM nginx:1.15.2
+
+RUN rm /etc/nginx/nginx.conf
+COPY nginx.conf /etc/nginx/
+```
 
 This pulls down the [nginx Docker image](https://hub.docker.com/_/nginx/) and simply copies `nginx.conf` into the Docker container.
 
@@ -140,26 +146,27 @@ We’ve already completed step one, so now we can safely move on to step two.
 
 Our `docker-compose.yml` file looks like this:
 
-    version: '3'
-    
-    services:
-    
-      api:
-        container_name: api # Name can be anything
-        restart: always
-        build: ./api
-        ports:
-          - "8000:8000"
-        command: gunicorn -w 1 -b :8000 app:app
-    
-      nginx:
-        container_name: nginx
-        restart: always
-        build: ./nginx
-        ports:
-          - "8001:8001"
-        depends_on:
-          - api
+```docker
+version: '3'
+
+services:
+  api:
+    container_name: api # Name can be anything
+    restart: always
+    build: ./api
+    ports:
+      - "8000:8000"
+    command: gunicorn -w 1 -b :8000 app:app
+
+  nginx:
+    container_name: nginx
+    restart: always
+    build: ./nginx
+    ports:
+      - "8001:8001"
+    depends_on:
+      - api
+```
 
 There are a few things to note about this file.
 
@@ -178,5 +185,3 @@ I highly encourage you to read more about Docker and Docker Compose [here](https
 There we have it. We’ve now configured nginx, Docker’d our Flask Application and used Docker Compose to bring it together.
 
 You should now simply be able to type `docker-compose up` and your server should start.
-
-In the next article, I’ll go over deploying this to AWS, Google Cloud and Digital Ocean.

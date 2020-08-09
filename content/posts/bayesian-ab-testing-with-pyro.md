@@ -38,16 +38,18 @@ Something to notice, is our \`n\`, sample sizes are different between each campa
 
 Using Pyro, we can define our model as follows:
 
-    def ab_model(obs_v1, obs_v2, n_1, n_2):
-        prior_v1 = pyro.sample("prior_v1", dist.Beta(2, 2))
-        prior_v2 = pyro.sample("prior_v2", dist.Beta(2, 2))
-        
-        difference = pyro.deterministic("difference", prior_v1 - prior_v2)
-        
-        with pyro.plate('likelihood_1', 1000):
-            likelihood_v1 = pyro.sample("likelihood_v1", dist.Binomial(total_count=n_1, probs=prior_v1), obs=obs_v1)
-            likelihood_v2 = pyro.sample("likelihood_v2", dist.Binomial(total_count=n_2, probs=prior_v2), obs=obs_v2)
-        return difference
+```python
+def ab_model(obs_v1, obs_v2, n_1, n_2):
+    prior_v1 = pyro.sample("prior_v1", dist.Beta(2, 2))
+    prior_v2 = pyro.sample("prior_v2", dist.Beta(2, 2))
+    
+    difference = pyro.deterministic("difference", prior_v1 - prior_v2)
+    
+    with pyro.plate('likelihood_1', 1000):
+        likelihood_v1 = pyro.sample("likelihood_v1", dist.Binomial(total_count=n_1, probs=prior_v1), obs=obs_v1)
+        likelihood_v2 = pyro.sample("likelihood_v2", dist.Binomial(total_count=n_2, probs=prior_v2), obs=obs_v2)
+    return difference
+```
 
 Breaking it down, Pyro's models look like regular python functions.
 
@@ -61,12 +63,14 @@ We can now condition our model to find the true values of prior_v1, prior_v2 but
 
 To do this, we'll use Markov Chain Monte Carlo
 
-    nuts = NUTS(ab_model, adapt_step_size=True)
-    
-    mcmc = MCMC(nuts, num_samples=3000, warmup_steps=200)
-    mcmc.run(torch.tensor(obs_v1, dtype=torch.double),
-             torch.tensor(obs_v2, dtype=torch.double),
-            torch.tensor(n_1, dtype=torch.double),
-            torch.tensor(n_2, dtype=torch.double))
+```python
+nuts = NUTS(ab_model, adapt_step_size=True)
+
+mcmc = MCMC(nuts, num_samples=3000, warmup_steps=200)
+mcmc.run(torch.tensor(obs_v1, dtype=torch.double),
+            torch.tensor(obs_v2, dtype=torch.double),
+        torch.tensor(n_1, dtype=torch.double),
+        torch.tensor(n_2, dtype=torch.double))
+```
 
 The mechanics behind MCMC is again be
