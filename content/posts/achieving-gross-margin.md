@@ -1,7 +1,9 @@
 +++
 date = 2020-03-11T04:15:00Z
 tags = ["stocks", "sales", "research"]
-title = "Achieving Gross Margin"
+title = "Achieving Gross Margin as a US Listed Software Company"
+slug = "achieving-gross-margin"
+description = "Gross margin is popular metric for stock analysts and companies. We explore the relationship and the importance it plays for NASDAQ and NYSE listed companies."
 
 +++
 Gross Margin is perhaps of the most followed metrics when evaluating software companies. Investors and companies themselves are absolutely obsessed with it
