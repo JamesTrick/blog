@@ -4,15 +4,16 @@ defaultContentLanguage   = "en"
 isMultilingual           = false
 title                    = "Call me James"
 theme                    = "james"
-pygmentsStyle            = "monokai"
+pygmentsStyle            = "dracula"
 pygmentsCodefences       = true
 googleAnalytics          = "UA-158965144-1"
+disqusShortname          = "jamesmalcolm"
 
 [params]
     dateform             = "Mon Jan 02, 2006"
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
     homepage             = "home"
-    footerText           = "James Malcolm. Copyright 2020."
+    footerText           = "James Malcolm. 2020."
 
 # Metadata for Open Graph and Twitter
     description          = "Blog by James Malcolm exploring Machine Learning, business and stock analysis."

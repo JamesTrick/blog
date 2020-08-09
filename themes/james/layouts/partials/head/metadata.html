@@ -4,7 +4,8 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
-{{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+<meta name="robots" content="index, follow">
+<meta name="description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ .Description }}{{ end }}">
 <title>
 {{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}
 </title>

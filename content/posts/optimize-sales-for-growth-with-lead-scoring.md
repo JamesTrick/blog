@@ -2,6 +2,7 @@
 date = 2020-08-03T06:12:00Z
 tags = ["sales", "data", "analytics", "lead-scoring"]
 title = "Optimize Sales For Growth with Lead Scoring"
+description = "Increase your sales win-rate and efficiency with lead scoring. A technique that is applicable to businesses of all sizes."
 
 +++
 ![](/static/graphs/pexels-fauxels-3183170-1.jpg)
