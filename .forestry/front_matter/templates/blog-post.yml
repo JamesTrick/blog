@@ -21,6 +21,19 @@ fields:
   type: tag_list
   default: []
   label: Tags
+- name: description
+  type: text
+  config:
+    required: true
+    max: 160
+  label: description
+  description: SEO description
+- name: slug
+  type: text
+  config:
+    required: false
+  label: slug
+  description: URL Slug. No spaces, use hyphens.
 pages:
 - content/posts/achieving-gross-margin.md
 - content/posts/balancing-research-and-sales-spend.md
