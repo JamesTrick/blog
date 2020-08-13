@@ -1,8 +1,10 @@
 +++
 date = 2020-04-06T06:14:20Z
 tags = ["data", "pyro", "sales", "python"]
-draft=true
+draft=false
 title = "Bayesian AB Testing with Pyro"
+slug="bayesian-ab-testing-pyro"
+description="Implement a successful experiment using Bayesian AB testing. In this, we use Pyro, a python framework to analyse marketing and on-boarding experiments"
 
 +++
 Recently, I’ve been involved in experiment design and measurement - specifically AB Testing. This experience has encouraged me to learn more about experimentation because of unique challenges
