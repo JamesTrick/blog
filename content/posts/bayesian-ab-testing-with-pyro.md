@@ -1,7 +1,6 @@
 +++
-date = 2020-08-13T06:14:20Z
+date = 2020-08-13T05:14:20Z
 description = "Implement a successful experiment using Bayesian AB testing. In this, we use Pyro, a python framework to analyse marketing and on-boarding experiments"
-draft = true
 slug = "bayesian-ab-testing-pyro"
 tags = ["data", "pyro", "sales", "python"]
 title = "Bayesian AB Testing with Pyro"
