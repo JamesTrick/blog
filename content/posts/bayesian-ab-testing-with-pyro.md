@@ -1,14 +1,15 @@
 +++
 date = 2020-08-13T06:14:20Z
+description = "Implement a successful experiment using Bayesian AB testing. In this, we use Pyro, a python framework to analyse marketing and on-boarding experiments"
+slug = "bayesian-ab-testing-pyro"
 tags = ["data", "pyro", "sales", "python"]
 title = "Bayesian AB Testing with Pyro"
-slug="bayesian-ab-testing-pyro"
-description="Implement a successful experiment using Bayesian AB testing. In this, we use Pyro, a python framework to analyse marketing and on-boarding experiments"
 
 +++
 Recently, I’ve been involved in experiment design and measurement - specifically AB Testing. This experience has encouraged me to learn more about experimentation because of unique challenges
 
 In brief, the unique challenges posed were:
+
 * Dealing with largely a non-technical audience
 * Low sample sizes
 * Costly human interventions as a variant.
@@ -17,7 +18,7 @@ Because of this, I chose Bayesian AB Testing as a measurement framework. In brie
 
 * Whilst not immune to peeking, you can analyse results during an experiment with caution. This was good keeping stakeholders engaged throughout the journey.
 * There are no p-values, instead you get a Probability of X being better than Y. This is is a lot easier to explain to non-technical stakeholders.
-* There is potential for faster experiements when compared to traditional AB testing.
+* There is potential for faster experiments when compared to traditional AB testing.
 
 Literature on Bayesian AB testing is readily available, so I won’t go into a lot of detail explaining how it works. [A good guide is available here from Dynamic Yield.](https://www.dynamicyield.com/lesson/bayesian-testing/)
 
@@ -29,7 +30,7 @@ Whilst Dynamic Yield also offers a great calculator here that you can use for yo
 
 ### Introducing Pyro
 
-[Pyro](https://pyro.ai/) is a universal probabilistic programming language (PPL) written in Python and supported by PyTorch on the backend. It was originally open sourced by [Uber AI](ttps://www.uber.com/us/en/uberai). 
+[Pyro](https://pyro.ai/) is a universal probabilistic programming language (PPL) written in Python and supported by PyTorch on the backend. It was originally open sourced by [Uber AI](ttps://www.uber.com/us/en/uberai).
 
 It is a highly flexible language similar to [PyMC3](https://docs.pymc.io/) and [Stan](https://mc-stan.org/), and whilst it's uses and functionality far exceed AB testing - it is perfectly suited to this type of problem.
 
@@ -45,9 +46,9 @@ And you want to know what channel is performing better – calling or emailing?
 We can summarise the results as below:
 
 | Method | Attempts/Reach | Conversions |
-|--------|----------------|-------------|
-| Email  | 700            | 73          |
-| Call   | 200            | 35          |
+| --- | --- | --- |
+| Email | 700 | 73 |
+| Call | 200 | 35 |
 
 Something to notice is our sample sizes are different between each campaign. This is an advantage that Bayesian AB testing can give you over Frequentist testing.
 
@@ -55,9 +56,9 @@ Something to notice is our sample sizes are different between each campaign. Thi
 
 Since we’re measuring a Yes/No event, we should use the Binomial distribution to model conversion events. Now that we've specified the posterior distribution how do we influence the Binomial rate?
 
-This is where the conjugate prior comes in, as the Beta distribution is the conjugate prior for the Binomial distribution - we'll use the Beta distribution. In this model, we use a $Beta(2,2)$ prior, which effecively says our _prior_ belief is that conversion is 50% and is equally likely to be higher or lower. Of course, once we condition this with actual data this belief will quickly adjust.
+This is where the conjugate prior comes in, as the Beta distribution is the conjugate prior for the Binomial distribution - we'll use the Beta distribution. In this model, we use a $Beta(2,2)$ prior, which effectively says our _prior_ belief is that conversion is 50% and is equally likely to be higher or lower. Of course, once we condition this with actual data this belief will quickly adjust.
 
-As an example, let's say that we've already run an email campaign and it had a conversion rate of 20% and now we're wanting to test to see if a costly campaign such as calling is more effective. As it would be a shame to waste the knowledge we already have, we could encode our knowledge with a prior such as $Beta(5, 20)$. This difference can be illustrated with the following graph. 
+As an example, let's say that we've already run an email campaign and it had a conversion rate of 20% and now we're wanting to test to see if a costly campaign such as calling is more effective. As it would be a shame to waste the knowledge we already have, we could encode our knowledge with a prior such as $Beta(5, 20)$. This difference can be illustrated with the following graph.
 
 ![](/static/graphs/distributions.png)
 
@@ -83,7 +84,7 @@ If you're familiar with Python, the first thing you'll notice is that this looks
 
 To begin, `prior_email` and `prior_call` are where we define our Beta priors. This is an interesting point that's worth further discussion.
 
-The goal of this experiment is to test the differences between our two compaigns. Whilst this paramater isn't neccessary, it can be helpful to wrap the difference between `prior_call - prior_email` within the `pyro.deterministic`. Which returns a single point estimate (MAP).
+The goal of this experiment is to test the differences between our two campaigns. Whilst this parameter isn't necessary, it can be helpful to wrap the difference between `prior_call - prior_email` within the `pyro.deterministic`. Which returns a single point estimate (MAP).
 
 ## Running the model
 
@@ -94,9 +95,9 @@ obs_call = [1, 0, ...., 1, 1]
 obs_call = 35
 ```
 
-As you can see you can pass through a list of Binomaial observations or single integer.
+As you can see you can pass through a list of Binomial observations or single integer.
 
-The next step is to condition or model on our observed data. Pyro has two main ways of doing this: Variational Inference, and Markov Chanin Monte Carlo (MCMC) simulations. We'll use MCMC as follows:
+The next step is to condition or model on our observed data. Pyro has two main ways of doing this: Variational Inference, and Markov Chain Monte Carlo (MCMC) simulations. We'll use MCMC as follows:
 
 ```python
 from pyro.infer.mcmc import NUTS, MCMC
@@ -117,7 +118,7 @@ mcmc.run(
 
 The most simple way to view the results, is by running `mcmc.summary()`. This will display the mean and standard deviations of prior_call and prior_email - representing the estimated conversion rates that these campaigns achieved.
 
-How can we quantify the uncertainity of which campaign performed better? This is where Bayesian testing really shines. To get this, we can use the difference we defined in our model.
+How can we quantify the uncertainty of which campaign performed better? This is where Bayesian testing really shines. To get this, we can use the difference we defined in our model.
 
 ```python
 
@@ -137,6 +138,6 @@ This will return a probability of Calling being better than Emailing. Of course,
 
 ## Extending AB Testing
 
-The most logicial extension is for situations where we have multiple variants. Bayesian AB testing can extend nicely to this, without using the bonferroni correction. 
+The most logical extension is for situations where we have multiple variants. Bayesian AB testing can extend nicely to this, without using the bonferroni correction.
 
 Another extension would be to consider revenue and costs associated to campaigns. Bayesian AB testing is flexible enough to incorporate monetary effects, and because of the intuitive nature of Bayesian AB testing you can yield business insight.
