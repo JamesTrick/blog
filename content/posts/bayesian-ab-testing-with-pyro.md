@@ -58,7 +58,7 @@ This is where the conjugate prior comes in, as the Beta distribution is the conj
 
 As an example, let's say that we've already run an email campaign and it had a conversion rate of 20% and now we're wanting to test to see if a costly campaign such as calling is more effective As it would be a shame to waste the knowledge we already have, we could encode our knowledge with a prior such as $Beta(5, 20)$. This difference can be illustrated with the following graph. 
 
-\[Graph of different Betas\]
+![](/static/graphs/distributions.png)
 
 In terms of running an experiment, we have the potential to get faster results than a traditional AB test by using informative priors. As well as the continual updating nature of Bayesian testing, we can capture run-away winners (or losses) earlier than a fixed AB test.
 
