@@ -1,5 +1,5 @@
 +++
-date = 2020-04-06T06:14:20Z
+date = 2020-13-08T06:14:20Z
 tags = ["data", "pyro", "sales", "python"]
 draft=false
 title = "Bayesian AB Testing with Pyro"
