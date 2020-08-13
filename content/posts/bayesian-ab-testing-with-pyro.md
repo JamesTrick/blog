@@ -58,7 +58,7 @@ Since we’re measuring a Yes/No event, we should use the Binomial distribution 
 
 This is where the conjugate prior comes in, as the Beta distribution is the conjugate prior for the Binomial distribution - we'll use the Beta distribution. In this model, we use a $Beta(2,2)$ prior, which effecively says our _prior_ belief is that conversion is 50% and is equally likely to be higher or lower. Of course, once we condition this with actual data this belief will quickly adjust.
 
-As an example, let's say that we've already run an email campaign and it had a conversion rate of 20% and now we're wanting to test to see if a costly campaign such as calling is more effective As it would be a shame to waste the knowledge we already have, we could encode our knowledge with a prior such as $Beta(5, 20)$. This difference can be illustrated with the following graph. 
+As an example, let's say that we've already run an email campaign and it had a conversion rate of 20% and now we're wanting to test to see if a costly campaign such as calling is more effective. As it would be a shame to waste the knowledge we already have, we could encode our knowledge with a prior such as $Beta(5, 20)$. This difference can be illustrated with the following graph. 
 
 ![](/static/graphs/distributions.png)
 
