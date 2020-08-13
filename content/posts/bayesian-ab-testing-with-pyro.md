@@ -1,8 +1,10 @@
 +++
-date = 2020-04-06T06:14:20Z
+date = 2020-13-08T06:14:20Z
 tags = ["data", "pyro", "sales", "python"]
-draft=true
+draft=false
 title = "Bayesian AB Testing with Pyro"
+slug="bayesian-ab-testing-pyro"
+description="Implement a successful experiment using Bayesian AB testing. In this, we use Pyro, a python framework to analyse marketing and on-boarding experiments"
 
 +++
 Recently, I’ve been involved in experiment design and measurement - specifically AB Testing. This experience has encouraged me to learn more about experimentation because of unique challenges
@@ -56,9 +58,9 @@ Since we’re measuring a Yes/No event, we should use the Binomial distribution 
 
 This is where the conjugate prior comes in, as the Beta distribution is the conjugate prior for the Binomial distribution - we'll use the Beta distribution. In this model, we use a $Beta(2,2)$ prior, which effecively says our _prior_ belief is that conversion is 50% and is equally likely to be higher or lower. Of course, once we condition this with actual data this belief will quickly adjust.
 
-As an example, let's say that we've already run an email campaign and it had a conversion rate of 20% and now we're wanting to test to see if a costly campaign such as calling is more effective As it would be a shame to waste the knowledge we already have, we could encode our knowledge with a prior such as $Beta(5, 20)$. This difference can be illustrated with the following graph. 
+As an example, let's say that we've already run an email campaign and it had a conversion rate of 20% and now we're wanting to test to see if a costly campaign such as calling is more effective. As it would be a shame to waste the knowledge we already have, we could encode our knowledge with a prior such as $Beta(5, 20)$. This difference can be illustrated with the following graph. 
 
-\[Graph of different Betas\]
+![](/static/graphs/distributions.png)
 
 In terms of running an experiment, we have the potential to get faster results than a traditional AB test by using informative priors. As well as the continual updating nature of Bayesian testing, we can capture run-away winners (or losses) earlier than a fixed AB test.
 
