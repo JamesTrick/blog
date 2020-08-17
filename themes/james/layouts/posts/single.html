@@ -42,4 +42,5 @@
 <div class="section bottom-menu">
     {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" true) }}
 </div>
+{{ if .Params.hasMath}}{{ partial "math.html" . }}{{ end }}
 {{ end }}
