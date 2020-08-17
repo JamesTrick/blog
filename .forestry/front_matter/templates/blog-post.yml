@@ -34,6 +34,10 @@ fields:
     required: false
   label: slug
   description: URL Slug. No spaces, use hyphens.
+- name: hasMath
+  type: boolean
+  label: Has Math
+  description: Tick True, if post contains formulas.
 pages:
 - content/posts/achieving-gross-margin.md
 - content/posts/balancing-research-and-sales-spend.md
