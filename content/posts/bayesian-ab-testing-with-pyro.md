@@ -7,7 +7,7 @@ tags = ["data", "pyro", "sales", "python"]
 title = "Bayesian AB Testing with Pyro"
 
 +++
-Recently, I’ve been involved in experiment design and measurement - specifically AB Testing. This experience has encouraged me to learn more about experimentation because of unique challenges faced with conversion optimisation. This post, goes hand in hand with [lead score experimentation](/optimize-sales-for-growth-with-lead-scoring/).
+Recently, I’ve been involved in experiment design and measurement - specifically AB Testing. This experience has encouraged me to learn more about experimentation because of unique challenges faced with conversion optimisation. This post, goes hand in hand with [lead score experimentation](/posts/optimize-sales-for-growth-with-lead-scoring/).
 
 In brief, the unique challenges posed were:
 
