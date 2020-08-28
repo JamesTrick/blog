@@ -1,8 +1,10 @@
 +++
 date = 2020-08-03T06:12:00Z
+description = "Increase your sales win-rate and efficiency with lead scoring. A technique that is applicable to businesses of all sizes."
+hasMath = false
+slug = ""
 tags = ["sales", "data", "analytics", "lead-scoring"]
 title = "Optimize Sales For Growth with Lead Scoring"
-description = "Increase your sales win-rate and efficiency with lead scoring. A technique that is applicable to businesses of all sizes."
 
 +++
 ![](/static/graphs/pexels-fauxels-3183170-1.jpg)
@@ -18,9 +20,11 @@ Sales teams are often the entrance way into their company. Creating an excellent
 
 ## **So, what is lead scoring?**
 
-[Marketo explains lead scoring](https://blog.marketo.com/2011/01/what-is-lead-scoring.html) as the process of ranking prospects in terms of the sales-readiness, or willingness to convert or buy. Lead scores take many forms from a simple number or a probability. Whether a number or probability, the processes around lead scoring should be the same.
+[Marketo explains lead scoring](https://blog.marketo.com/2011/01/what-is-lead-scoring.html) as the process of ranking prospects in terms of the sales-readiness, or willingness to convert or buy. Lead scores take many forms from a simple number or a more advanced probability. Whether a number or probability, the processes around lead scoring should be the same.
 
-To be clear, lead scoring will not increase the number of prospects you have. But, it may well help you make the most out of your current prospects by reducing the need to increase acquisition of more prospects. Specifically, lead scoring optimizes the process of taking Marketing Qualified Leads through to Sales Qualified Leads, and ultimately successful sales.
+To be clear, lead scoring will not increase the number of prospects you have. But, it may well help you make the most out of your current prospects by reducing the need to increase acquisition of more prospects. 
+
+Specifically, lead scoring optimizes the process of taking Marketing Qualified Leads through to Sales Qualified Leads, and ultimately successful sales.
 
 At a glance, benefits of a lead score can include:
 
@@ -32,9 +36,9 @@ At a glance, benefits of a lead score can include:
 
 Whilst the intention behind lead scores can be applied to many industries, I’ll focus primarily on SaaS sales funnels, however I will make references to other industries and business models where it is also relevant.
 
-To really benefit from a lead score, the business will typically have an Inside Sales team who contact leads. Companies without a Sales team or with a really short sales cycle are likely to less benefit from the lead scoring described in this article.
+To really benefit from a lead score, the business will have an Inside Sales team who contact leads. Companies without a Sales team or with an already really, really short sales cycle are likely to less benefit from the lead scoring described in this article.
 
-However, similar styles of model can be used for pre-trial situations or even e-commerce sites to optimize allocation of social spend for advertisement retargeting, with the goal of reducing Cost of Acquisition (CAC), whilst maintaining sales. This is a particular area of research that I’m interested in, which has unique challenges in regard to scoring. Particularly lack of information and no clear path to a sale/conversion.
+Similar styles of model can be used for pre-trial/prospect situations or even e-commerce sites to optimize allocation of social spend for advertisement retargeting, with the goal of reducing Cost of Acquisition (CAC), whilst maintaining sales. This is a particular area of research that I’m interested in, which has unique challenges in regard to scoring. Particularly around lack of information and no clear path to a sale/conversion.
 
 A commonly held view is that lead scores work best in resource constrained sales environments -- a situation in which you have more leads than you or your sales team can handle. However, I believe lead scores are applicable to many companies, regardless of the size and resource level.
 
@@ -91,7 +95,7 @@ Despite all the above, lead scores are limited in their usefulness. Their reach 
 
 Lead scoring can help identify these people and are great for optimizing sales volume with a slimmed resource. But, you may find that whilst sales volume increases, average revenue (ARPU) decreases.
 
-The easiest way to handle this would be to think of a 2 model approach. This idea is comes from [Brendan Duncan and Charles Elkan in this extremely helpful paper](https://www.researchgate.net/publication/299969952_Probabilistic_Modeling_of_a_Sales_Funnel_to_Prioritize_Leads). I also explain this [trade off and how to mitiate it here](/posts/sales-volume-vs-account-value/).
+The easiest way to handle this would be to think of a 2 model approach. This idea is comes from [Brendan Duncan and Charles Elkan in this extremely helpful paper](https://www.researchgate.net/publication/299969952_Probabilistic_Modeling_of_a_Sales_Funnel_to_Prioritize_Leads). I also explain this [trade off and how to mitigate it here](/posts/sales-volume-vs-account-value/).
 
 Another caveat is that lead scoring normally represents leads as if nothing happened to them - that is, no additional campaigns or interventions take place. This, of course, isn’t normally the case, and looking to re-frame your lead score to examine probability of converting given the campaign is an excellent way to go beyond a simple lead score.
 
