@@ -8,14 +8,14 @@ tags = ["docker", "machine learning", "flask", "python"]
 title = "Deploying Machine Learning Models with Docker"
 
 +++
-There are a lot of articles out there explaining how to wrap Flask around your machine learning models to serve them as a RESTful API. This article extends that by explaining how to productionize your Flask API and get it ready for deployment using Docker.
+There are a lot of articles out there explaining how to wrap Flask around your machine learning models to serve them as a RESTful API. This article assumes that you already have wrapped your model in a Flask REST API, and focuses more on getting it production ready using Docker.
 
 ### Motivation
 
 Why do we need to further work on our Flask API to make it deployable?
 
 * [Flask’s built-in server is not suitable for production](http://flask.pocoo.org/docs/1.0/deploying/#deployment)
-* Docker allows for smoother deployments, and more reliability than attempting to run Flask on a standard Virtual Machine.
+* Docker allows for smoother deployments, more reliability, and better developer-production parity than attempting to run Flask on a standard Virtual Machine.
 
 In my mind, those are the two biggest motivations on why further work is needed.
 
@@ -67,9 +67,11 @@ Before we create the Dockerfile, we first need to install gunicorn by simply run
 
 Now’s also a good time to ensure the requirements.txt file is up to date — do this by running`pip freeze > requirements.txt` in your terminal.
 
-BOOM! Now we move onto creating our Docker container. To create a Docker container, we need to create a file called `Dockerfile`. This file acts as our ‘recipe’ of everything we need to run our application. To learn more about Docker itself, check our the [Getting Started pages on Docker’s website](https://docs.docker.com/get-started/).
+BOOM! Now we move onto creating our Docker container. To create a Docker container, we need to create a file called `Dockerfile`. 
 
-The Dockerfile below is relatively straight-forward. We leverage of an existing base-image with Python 3.6.2 already installed, then we make and copy our application folders into the container.
+If you're new to Docker, the `Dockerfile` can be seen as a ‘recipe’ of everything we need to run our application. It's where we build our environment and copy our project files for a consistent experience everytime. To learn more about Docker itself, check our the [Getting Started pages on Docker’s website](https://docs.docker.com/get-started/).
+
+The Dockerfile below is relatively straight-forward. We leverage of an existing base-image with Python 3.6 already installed, then we make and copy our application folders into the container.
 
 ```dockerfile
 FROM python:3.6
@@ -88,11 +90,13 @@ COPY . /home/project/app
 COPY ./models /home/project/app/models
 ```
 
-You may notice, that we haven’t specified `flask run` or any equivalent command in our Dockerfile. This is because we want to use gunicorn to start our Flask application. We also want to it to be started alongside our nginx container when. So we’ll be doing this when we configure Docker Compose later on.
+You may notice, that we haven’t specified `flask run` or any equivalent command in our Dockerfile. This is because we want to use gunicorn to start our Flask application. 
+
+We also want to it to be started alongside our nginx container when. So we’ll be doing this when we configure Docker Compose later on.
 
 ### nginx
 
-nginx in our case replaces the default Flask webserver and is a lot more scalable and reliable than Flask’s built in server.
+nginx in our case replaces the default Flask webserver and is significantly more scalable and production-ready than Flask’s built in server.
 
 We can set up nginx by creating a new directory within our project root, and creating a Dockerfile with the following:
 

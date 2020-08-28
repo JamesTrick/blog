@@ -1,7 +1,7 @@
 +++
 date = 2020-02-26T02:13:04Z
 tags = ["sales", "customer success", "stocks", "research"]
-title = "Balancing Research and Sales Spend"
+title = "How US Software Companies Balance Research and Sales Spend"
 description = "Sales Growth vs Product Development are often two competing factors of Startups and mature companies. We take a look at what the best US listed software companies do."
 
 +++
