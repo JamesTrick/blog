@@ -168,12 +168,25 @@ hr {
     line-height: 1.5em
 }
 
-#title {
+#main_title {
+    color: #fff;
+    opacity: 1;
     margin-top: 3rem;
     font-family: "Didact Gothic", "sans serif";
     font-size: 2rem;
     line-height: 3rem;
-    margin-bottom: 2rem
+    margin-bottom: 2rem,
+}
+
+#main_title {
+    color: #fff;
+    opacity: 1;
+    text-align: left;
+    margin-top: 3rem;
+    font-family: "Didact Gothic", "sans serif";
+    font-size: 2rem;
+    line-height: 3rem;
+    margin-bottom: 1rem,
 }
 
 #content {

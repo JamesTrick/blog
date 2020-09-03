@@ -9,16 +9,16 @@
     {{ block "head_resources" . }}
     <!-- Use this block to link to further resources like .js or .css files. -->
     {{ end }}
-    <title>
+<!--    <title>
         {{ block "title" . }}
         {{ .Title }}
         {{ end }}
-    </title>
+    </title>-->
 </head>
 
 <body>
     {{ block "main" . }}<div class="wrap">
-        {{ block "section_title" . }}<div class="section" id="title">{{ .Title }}</div>{{ end }}
+        {{ block "section_title" . }}<div class="section"><h1 id="main-title">{{ .Title }}</h1></div>{{ end }}
 
         {{ block "section_content" . }}<div class="section" id="content">{{ .Content }}</div>{{ end }}
 
