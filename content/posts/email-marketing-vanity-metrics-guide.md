@@ -4,7 +4,7 @@ description = "Vanity metrics play an important role in email marketing, we brea
 hasMath = false
 slug = "email-marketing-vanity-metrics"
 tags = ["marketing", "sales", "data"]
-title = "Email Marketing Vanity Metrics Guide"
+title = "Email Marketing: Vanity Metrics Guide"
 
 +++
 ![](https://res.cloudinary.com/dtexqfeo4/image/upload/v1599122057/blog/markus-winkler-Lp4jsVg8gpY-unsplash-min.jpg)
