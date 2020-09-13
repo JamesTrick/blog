@@ -1,5 +1,5 @@
 +++
-date = 2020-09-13T07:13:56Z
+date = 2020-09-13T07:00:00Z
 description = "Trustpilot is a leading consumer review site, understand how they rank businesses and how you can learn from it."
 hasMath = false
 slug = "trustpilot-scoring"
