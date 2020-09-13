@@ -2,6 +2,7 @@
 date = 2020-09-13T10:13:56Z
 description = "Trustpilot is a leading consumer review site, understand how they rank businesses and how you can learn from it."
 hasMath = false
+draft = false
 slug = "trustpilot-scoring"
 tags = ["data", "analytics", "business"]
 title = "How does Trustpilot scoring work?"
