@@ -9,7 +9,7 @@ title = "Current State of NZ's Economy - Sep 2020"
 +++
 ![](https://upload.wikimedia.org/wikipedia/commons/b/b4/Northern_Rock_Queue.jpg)
 
-There is a lot happening in New Zealand's economy currently. New Zealand is officially in a recession with new GDP figures that came out yesterday, a monetary policy update next week and an election mid-next month.
+There is a lot happening in New Zealand's economy currently. New Zealand is officially in a recession with new GDP figures that came out yesterday, a monetary policy update is due next week and an election is taking place mid next month.
 
 [Thursday's numbers from Statistics New Zealand](https://www.stats.govt.nz/indicators/gross-domestic-product-gdp) represented a -12.2% reduction in GDP for the June 2020 quarter - the largest quarterly fall in GDP on record. Which, unlike the previous quarter's figures only captured a week or two of New Zealand's nationwide 4-week lock down, June 2020 figures captures the lion's share of the lock down.
 
@@ -17,17 +17,23 @@ There is a lot happening in New Zealand's economy currently. New Zealand is offi
 
 ## Monetary Policy: The Stress Test
 
-With little wiggle room in monetary policy, the Reserve Bank of New Zealand (RBNZ) released a [Stress testing report](https://www.rbnz.govt.nz/-/media/ReserveBank/Files/Publications/Bulletins/2020/rbb2020-83-03.pdf?revision=63e16030-7960-4a72-b9b5-c9f5e798a4f8) aimed to provide confidence to businesses and consumers. In the report, they model the banks resilience under two scenarios, both significantly worse than the current economic situation.
+With little wiggle room in monetary policy, the Reserve Bank of New Zealand (RBNZ) released a [Stress testing report](https://www.rbnz.govt.nz/-/media/ReserveBank/Files/Publications/Bulletins/2020/rbb2020-83-03.pdf?revision=63e16030-7960-4a72-b9b5-c9f5e798a4f8) aimed to provide confidence to businesses and consumers. 
 
-In the one-in-50 to one-in 75 year event, the situation describes are rise in unemployment to 13.9% (currently 4.0% for the June 2020 quarter) and a fall of 37% in housing prices.
+In the report, they model the banks resilience under two scenarios:
+* A one-in-50 to one-on-75 year sitauation
+* A one-in-200 year event.
+
+Both sitatuions are significantly worse than the current economic situation.
+
+In the one-in-50 to one-in 75 year event, it sees a rise in unemployment to 13.9% (currently 4.0% for the June 2020 quarter) and a fall of 37% in housing prices.
 
 Under this scenario RBNZ conclude that all banks remain above the regulatory minimums, and will remain resilient given these conditions.
 
-Bank stability, or more broadly confidence in banks is a crucial factor in recessions. A loss of confidence can cause bank runs as people rush to withdraw their funds - depicted in the header image above of a bank run in the 2008 crisis.
+Bank stability, or more broadly confidence in banks is a crucial factor in recessions. A loss of confidence can cause bank runs as people rush to withdraw their funds - depicted in the header image above of a bank run in the 2008 crisis. This report is an interesting one, and is the RBNZ flexing their position to go beyond sole monetary policy.
 
-Of course, this report simply speaks to the effect on banks. A 37% reduction in house prices will cause severe economic damage, and we can expect a large increase in home loan defaults.
+Of course, this report simply speaks to the effect on banks. A 37% reduction in house prices will cause severe economic damage, and we can expect a large increase in home loan defaults causing not isolated to banking.
 
-The loan-to-value ratios over the good years has meant home-owners generally have a more equity in a house when compared to the 2008 crash, which should help reduce home loan defaults.
+The loan-to-value ratios over the 'good years' have meant home-owners generally have a more equity in a house when compared to the 2008 crash, which should help reduce home loan defaults.
 
 On the more traditional monetary policy side, there's no real appetite to even consider increasing interest rates. [Low interests facilitate, but can't force increased economic activity](https://www.rbnz.govt.nz/news/2020/09/confidence-in-a-world-of-uncertainty).
 
@@ -35,7 +41,7 @@ With interest rates already at an all time low (Official Cash Rate currently 0.2
 
 ### Confidence in the Economy
 
-[ANZ's Consumer confidence index took a slight dip](https://www.anz.co.nz/content/dam/anzconz/documents/economics-and-market-research/2020/ANZ-ConsumerConfidence-20200828.pdf) in August 2020 easing 4 points which is well under the historical average. This comes as it was discovered COVID-19 is back in the community.
+[ANZ's Consumer confidence index took a slight dip](https://www.anz.co.nz/content/dam/anzconz/documents/economics-and-market-research/2020/ANZ-ConsumerConfidence-20200828.pdf) in August 2020, easing 4 points which is well under the historical average. This comes as it was discovered COVID-19 is back in the community.
 
 Overall consumer confidence has recovered nicely from the COVID lows seen during lockdown. 27% of consumers expect to to be better off financially this time next year, and only 3% of consumers think it's a bad time to buy a major household item. Given the lockdown and economic conditions - these are pretty positive indicators.
 
@@ -47,7 +53,7 @@ Net migration creates demand for housing in New Zealand. Increased migration, bo
 
 ## Income and Employment
 
-Forces pushing down house prices, are largely employment related, both unemployment and income levels. Effects of unemployment and lower income levels causes ripples beyond housing prices, including:
+Other forces pushing down house prices, are largely employment related, both unemployment and income levels. Effects of unemployment and lower income levels causes ripples beyond housing prices, including:
 
 * Lower consumption spending
 * Lower tax revenue collected from Income and GST.  
@@ -62,4 +68,4 @@ It's early days in this economic downturn, with additional complexities such as 
 
 Unfortunately, it seems that our most valuable industries, tourism, retail and hospitality will always be the first, and hardest hit should COVID-19 return. 
 
-It's hard not to focus on quarter by quarter thinking, but the economy needs a clear long-term recovery plan to keep confidence high. 
+It's hard not to focus on quarter by quarter thinking, but the economy needs a clear long-term recovery plan to keep confidence high.
