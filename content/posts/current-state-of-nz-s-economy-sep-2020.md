@@ -62,4 +62,4 @@ It's early days in this economic downturn, with additional complexities such as 
 
 Unfortunately, it seems that our most valuable industries, tourism, retail and hospitality will always be the first, and hardest hit should COVID-19 return. 
 
-It's hard not to focus on quarter by quarter thinking, but the economy needs a clear long-term recovery plan to keep confidence high.
+It's hard not to focus on quarter by quarter thinking, but the economy needs a clear long-term recovery plan to keep confidence high. 
