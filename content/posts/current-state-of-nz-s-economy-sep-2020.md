@@ -47,7 +47,7 @@ Overall consumer confidence has recovered nicely from the COVID lows seen during
 
 ## Net Migration is a potential positive
 
-New Zealand has been viewed as a leader with its COVID-19 response, boosting its popularity and sparking criticism from Donald Trump. As a result of uncertainty in the world, and the relative certainty in New Zealand, New Zealand has seen [Net Migration has been recent high](https://www.stats.govt.nz/news/migration-flows-down-to-a-trickle).
+New Zealand has been viewed as a leader with its COVID-19 response, boosting its popularity and sparking criticism from Donald Trump. As a result of uncertainty in the world, and the relative certainty in New Zealand, New Zealand has experienced record highs in Net Migration from returning Kiwis. Although, this appears to have [slowed down in month of July](https://www.stats.govt.nz/news/migration-flows-down-to-a-trickle).
 
 Net migration creates demand for housing in New Zealand. Increased migration, bolstered with low interest rates are expected to minimise the risk of significant house price drop.
 
