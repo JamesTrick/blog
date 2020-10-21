@@ -3,7 +3,7 @@ date = 2020-10-21T23:06:57Z
 description = "Adrian Orr, Governer of Reserve Bank of New Zealand contemplates the re-introduction of LVR measures. We explore the history and effect of this statment."
 hasMath = false
 slug = "effect-loan-to-value"
-tags = []
+tags = ["economics"]
 title = "The Effect of Loan to Value Ratios"
 
 +++
