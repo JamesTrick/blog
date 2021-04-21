@@ -3,7 +3,7 @@ title: About
 date: 2020-02-24T02:15:21.000+00:00
 
 ---
-# Hi, I'm James.
+## Hi, I'm James.
 
 I really enjoy doing things. I'm lucky that I get to solve a wide-range of business problems in my role as a Data Scientist at Xero.
 

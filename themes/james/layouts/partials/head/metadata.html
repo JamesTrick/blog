@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
 <meta name="robots" content="index, follow">
-<meta name="description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ .Description }}{{ end }}">
+<meta name="description" content="{{ $isHomePage := eq .Title .Site.Title }}{{ if eq $isHomePage false }}{{ if eq (len .Description) 0}} {{ .Site.Params.DefaultDescription }} {{ else }} {{ .Description }}{{ end }}{{ end }}">
 <title>
 {{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}
 </title>
