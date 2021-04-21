@@ -4,7 +4,7 @@ date: 2020-02-24T02:15:21.000+00:00
 
 ---
 
-# Getting in touch
+## Getting in touch
 
 If you have a business need, want advice on your business or data, or even how to combine the two - I'd love to help you and your team!</p>
 
