@@ -1,5 +1,4 @@
 {{ define "section_content" }}
-{{ hugo.Generator }}
 <div class="section" id="content">
     {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006") }} &#183; {{ .WordCount }} words
     <div class="tag-container">
@@ -20,7 +19,7 @@
     <div class="sharing" style="text-align: center;">
         <h3 style="text-align: center;">Share on...</h3>
         {{ $title := .Title }}
-        {{ $url := printf "%s" .URL | absLangURL }}
+        {{ $url := printf "%s" .Permalink | absLangURL }}
         {{ $body := print $title ", by " .Site.Title "\n" .Params.description "\n\n" $url "\n" }}
         <div id="sharing">
             <a href="http://www.facebook.com/sharer.php?u={{ $url }}" class="facebook" aria-label="share on Facebook">
