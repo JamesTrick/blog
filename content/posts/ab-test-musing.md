@@ -1,5 +1,5 @@
 +++
-date = 2022-05-35T04:15:00Z
+date = 2022-05-25T04:15:00Z
 tags = ["statisicial-musing", "research", "ab testing", "statistics"]
 title = "Statisicial Musing: Why we (AB) test"
 slug = "ab-testing-musing"
@@ -19,8 +19,8 @@ You might initially think to improve something, and I’d say you’re partially
 Recently I was consulting on a email campaign, and we were uncertain about whether adding the webinar date in the subject line would help improve registrations. We thought that adding a date would help - but we didn’t know this for sure.
 
 So to test our thinking, we performed a straight forward AB test, comparing the open rates of these two subject line variations:
-Register now for your webinar
-Live webinar 4 May: register now
+* Register now for your webinar
+* Live webinar 4 May: register now
 
 The result? Turns out the email without the date performed better in every metric. This is great learning for our clients and something they can take going forward.
 
