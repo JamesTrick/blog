@@ -1,4 +1,5 @@
 {{ define "section_content" }}
+{{ hugo.Generator }}
 <div class="section" id="content">
     {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006") }} &#183; {{ .WordCount }} words
     <div class="tag-container">
