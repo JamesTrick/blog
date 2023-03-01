@@ -40,6 +40,7 @@ fields:
   description: Tick True, if post contains formulas.
 pages:
 - content/posts/achieving-gross-margin.md
+- content/posts/an-overview-on-churn.md
 - content/posts/balancing-research-and-sales-spend.md
 - content/posts/bayesian-ab-testing-with-pyro.md
 - content/posts/classifying-german-text-with-pytorch.md
