@@ -57,13 +57,13 @@ params:
     Title: "Hi there \U0001F44B"
     Content: Welcome to James Malcolm's blog. Here I share some thoughts on data, business and the combination of the two.
 
-  socialIcons:
-    - name: twitter
-      url: "https://twitter.com/"
-    - name: stackoverflow
-      url: "https://stackoverflow.com"
-    - name: github
-      url: "https://github.com/"
+  #socialIcons:
+  #  - name: twitter
+  #    url: "https://twitter.com/"
+  #  - name: stackoverflow
+  #    url: "https://stackoverflow.com"
+  #  - name: github
+  #    url: "https://github.com/"
 
   analytics:
     google:
