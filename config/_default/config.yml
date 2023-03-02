@@ -1,4 +1,3 @@
-baseURL: 'https://jamesmalcolm.me/'
 title: Call me James
 paginate: 5
 theme: PaperMod
@@ -7,14 +6,12 @@ enableRobotsTXT: true
 buildDrafts: false
 buildFuture: false
 buildExpired: false
-googleAnalytics: UA-158965144-1
 
 minify:
   disableXML: true
   minifyOutput: true
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Call me James
   description: "Blog by James Malcolm exploring machine learning, business and other analysis."
   keywords: [Blog, machine learning, business, strategy]
@@ -53,21 +50,6 @@ params:
     text: "Home"
     icon: /apple-touch-icon.png
     iconHeight: 35
-
-  # profile-mode
-  profileMode:
-    enabled: false # needs to be explicitly set
-    title: ExampleSite
-    subtitle: "This is subtitle"
-    imageUrl: "<img location>"
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my image
-    buttons:
-      - name: Posts
-        url: posts
-      - name: Tags
-        url: tags
 
   # home-info mode
   homeInfoParams:
