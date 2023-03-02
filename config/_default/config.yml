@@ -16,7 +16,7 @@ params:
   title: Call me James
   description: "Blog by James Malcolm exploring machine learning, business and other analysis."
   keywords: [Blog, machine learning, business, strategy]
-  author: Me
+  author: James Malcolm
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
@@ -55,7 +55,7 @@ params:
   # home-info mode
   homeInfoParams:
     Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Content: Welcome to James Malcolm's blog. Here I share some thoughts on data, business and the combination of the two.
 
   socialIcons:
     - name: twitter
