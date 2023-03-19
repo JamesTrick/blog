@@ -1,12 +1,11 @@
 +++
 date = 2022-05-25T04:15:00Z
-tags = ["statisicial-musing", "research", "ab testing", "statistics"]
-title = "Statisicial Musing: Why we (AB) test"
-slug = "ab-testing-musing"
 description = "A light overview on why we (Ab) test or test theories more generally."
+slug = "ab-testing-musing"
+tags = ["statisicial-musing", "research", "ab testing", "statistics"]
+title = "Statistical Musing: Why we (AB) test"
 
 +++
-
 But before we dive in, you may be wondering “what is an AB test”. Good question! Put simply - it’s when we split a segment of data (like customers) into two groups, and give them two experiences to see which they respond better to. 
 
 So - why do we AB test?
