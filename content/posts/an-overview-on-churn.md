@@ -18,11 +18,10 @@ These two metrics are often correlated but they have subtle differences. Custome
 
 Whereas, revenue churn encompasses less customer spending or plan downgrades. Downgrades are arguably a form of churn but offering a downgrade is a strategy to stop customer-based churn.
 
-Churn is incredibly important for businesses of all sizes to measure, as high churn rates can slow and even outpace a business's growth.
+Churn is incredibly important for businesses of all sizes to measure, as high churn rates can slow and even outpace a business's growth, [which I cover in more detail here](https://jamesmalcolm.me/posts/churn-and-growth/).
 
 ## **What affects churn rate?**
 
-  
 Virtually everything. So much so, I'd even go as far as suggesting churn rate is the ultimate customer-health metric as it truly represents a customer's dissatisfaction.
 
 I acknowledge that saying everything isn't helpful so let's go through a couple of key trends.
@@ -59,4 +58,4 @@ Churn and sales growth are often pitted together. This is reflected often in org
 
 So which one should you focus on? Sales and marketing costs are high, and are forever increasing. So from that perspective, focusing on retaining your customers and reducing churn is a smart move.
 
-I really do suggest reading Tomasz Tungaz's [article on Churn vs Growth](). Tungaz raises a great point that for smaller companies, high churn can suggest improper market fit, and that churn can erode the company's brand.
+I really do suggest reading Tomasz Tungaz's [article on Churn vs Growth](https://tomtunguz.com/churn-or-growth/). Tungaz raises a great point that for smaller companies, high churn can suggest improper market fit, and that churn can erode the company's brand.
