@@ -36,7 +36,7 @@ As mentioned, offering a downgrade or cheaper solution can be one way to prevent
 
 For many businesses or staff tasked with tackling churn changing prices of a good or service isn't feasible. So instead, reframe your project given the price, how do we maximise the perceived value a customer sees.
 
-### **Competition**
+### **Competition affects churn**
 
 Naturally, the relative strengths of your competition play a major role in churn. If a customer is churning because your competitor has better features, prices, customer support, etc.
 
