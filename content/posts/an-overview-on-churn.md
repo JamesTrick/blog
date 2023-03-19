@@ -44,6 +44,8 @@ A secondary component of this is the cost of moving. If your product is hard to 
 
 Simply put, the economic moat your business has plays a crucial role in churn.
 
+{{< subscribe  heading="Want learn more about churn? Subscribe below.">}}
+
 ## How does churn affect revenue?
 
 Churn is the opposite of growth, it acts as a strong handbrake to revenue growth.
