@@ -1,5 +1,7 @@
 baseURL: 'https://jamesmalcolm.me/'
 googleAnalytics: UA-158965144-1
+buildDrafts: false
+buildFuture: false
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
