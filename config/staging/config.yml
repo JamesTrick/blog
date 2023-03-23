@@ -4,7 +4,7 @@ baseURL: http://jamesmalcolm.me.s3-website-ap-southeast-2.amazonaws.com/
 
 deployment:
   targets:
-    - name: jamesmalcolm.me
+    - name: staging
       URL: 's3://jamesmalcolm.me?region=ap-southeast-2'
   matchers:
     - pattern: ^.+\.(js|css|png|jpg|gif|svg|ttf)$

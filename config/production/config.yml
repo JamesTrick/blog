@@ -8,7 +8,7 @@ params:
 
 deployment:
   targets:
-    - name: jamesmalcolm.me
+    - name: production
       URL: 's3://jamesmalcolm.me?region=ap-southeast-2'
   matchers:
     - pattern: ^.+\.(js|css|png|jpg|gif|svg|ttf)$
