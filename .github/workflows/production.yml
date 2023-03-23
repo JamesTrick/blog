@@ -20,6 +20,6 @@ jobs:
         uses: AlbertMorenoDEV/deploy-hugo-to-s3-action@v0.0.5
         with:
           hugo-version: 0.89.0
-          config: config/production/config.yml
+          config: production
           aws-access-key-id: ${{ secrets.AWS_ID }}
           aws-secret-access-key: ${{ secrets.AWS_KEY }}
