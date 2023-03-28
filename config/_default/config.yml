@@ -1,6 +1,7 @@
 title: Call me James
 paginate: 5
 theme: PaperMod
+timeZone: Pacific/Auckland
 
 enableRobotsTXT: true
 buildExpired: false
