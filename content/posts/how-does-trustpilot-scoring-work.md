@@ -13,9 +13,9 @@ Companies proudly display the scores on emails, websites, and other mediums as a
 
 ## **How is Trustpilot’s TrustScore calculated?**
 
-TrustScore is a measure of overall satisfaction, and can be seen in a similar light to Net Promoter Score, NPS. Unlike NPS, the score is bounded from 1 to 5 stars.
+TrustScore is a measure of overall satisfaction, and can be seen in a similar light to Net Promoter Score, NPS. Unlike NPS which is ranked from -100 to 100, TrustScore is bounded between 1 to 5 stars.
 
-Trustpilot are relatively open in terms of how the TrustScore is calculated, saying there are three factors that contribute towards a company’s TrustScore:
+Trustpilot are very open in terms of how the [TrustScore is calculated](https://support.trustpilot.com/hc/en-us/articles/201748946-TrustScore-and-star-rating-explained), saying there are three factors that contribute towards a company’s TrustScore:
 
 * Recency of reviews
 * Frequency of reviews
@@ -45,7 +45,7 @@ This brings us nicely to the first two points: Frequency and Recency. TrustPilot
 
 Businesses, wanting to improve or even maintain their score need to work hard to continually get frequent reviews to maintain recency in their reviews.
 
-This also has an added benefit for businesses, in that recent reviews have more of an effect on your current score than old ones.
+This also has an added benefit for businesses, in that recent reviews have more of an effect on your current score than old ones. You can [learn more about to hack your Trustscore in this follow-up post](/posts/improving-trustpilot-score/).
 
 Although we've explored that Bayesian averaging helps smooth out scoring for businesses with few reviews, exponential decay can help (or not help if reviews are negative) change the score of businesses with many existing reviews at a faster rate than a simple average as it weights recent reviews more highly.
 
