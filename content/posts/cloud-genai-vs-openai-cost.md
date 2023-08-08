@@ -9,7 +9,7 @@ tags: ["data", "llms", "generative ai"]
 
 In this post, we explore the cost of deploying or buying your generative AI. Specifically, I want to focus on the computing cost - not the additional costs which contribute to the total cost of ownership.
 
-In this, I want to explore four options, these are:
+In this, I want to explore three options, these are:
 
 1. Managed: Use OpenAI directly
 2. Self-managed: Deploy using AWS
@@ -29,6 +29,7 @@ For the cost of this, we draw from [Phillip Schmid’s blog post](https://www.ph
 * 98 vCPUs
 * 1152 GB of RAM
 * 8 NVIDIA A100 GPUs
+
 All this compute comes at a sizeable cost, running USD 32.773 per hour, or USD 23,923 per month within the us-east-1 region.
 
 The typical deployment of LLaMA on AWS would be using the [Sagemaker](https://aws.amazon.com/sagemaker/) and the Hugging Face DLC. Note, however, spot instances cannot be used for endpoints within Sagemaker. So a containerised service like ECS could help in bringing down the costs.
@@ -40,7 +41,7 @@ Google Cloud also offers the Nvidia A100 instances, and the most similar instanc
 * 96 vCPUs
 * 1360 GB of RAM
 * 8 NVIDIA A100 GPUs
-Similar to AWS, perhaps the easiest way to deploy 
+
 In this case, Google Cloud is more expensive than AWS running at USD 40.55 per hour, or USD 29,601.78 per month within the us-central1 region.
 
 Like AWS Sagemaker, [Vertex AI](https://cloud.google.com/vertex-ai) is an option to deploy your model, it has a very similar deployment pattern to that of Sagemaker. Unforetuenly, like Sagemaker, endpoints don’t support preemptible (spot) instances. Using a service such as Google Kubernetes Engine (GKE) would support GPUs, preemptible instances and scale to zero if desired.
