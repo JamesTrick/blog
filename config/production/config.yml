@@ -6,6 +6,10 @@ buildFuture: false
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
 
+disqusShortname: jamesmalcolm
+params:
+  comments: true
+
 deployment:
   targets:
     - name: jamesmalcolm.me
