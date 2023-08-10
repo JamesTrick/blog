@@ -12,8 +12,8 @@ Today, I want to take you through a simple next-word prediction model built usin
 ![](/static/images/google.gif)
 
 Google goes into detail on how they build their smart compose feature in their [research blog post here](https://ai.googleblog.com/2018/05/smart-compose-using-neural-networks-to.html). From this, I want to pull out some key learnings and requirements:
-Latency. Latency is important, must generate a response in under 100ms.
-They explored a Sequence to sequence style model (Seq2seq) but found it failed the latency test. Instead, they opted for a Recurrent neural network (RNN) model.
+* Latency. Latency is important, must generate a response in under 100ms.
+* They explored a Sequence to sequence style model (Seq2seq) but found it failed the latency test. Instead, they opted for a Recurrent neural network (RNN) model.
 
 You may be wondering, this blog post came out in 2018 - why am I talking about it now?
 
