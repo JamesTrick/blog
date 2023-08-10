@@ -3,11 +3,10 @@ googleAnalytics: UA-158965144-1
 buildDrafts: false
 buildFuture: false
 
+disqusShortname: jamesmalcolm
+
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-
-disqusShortname: jamesmalcolm
-params:
   comments: true
 
 deployment:
