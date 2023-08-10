@@ -120,3 +120,4 @@ outputs:
         - HTML
         - RSS
         - JSON # is necessary
+timeZone: Pacific/Auckland
