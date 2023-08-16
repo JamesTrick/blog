@@ -1,4 +1,4 @@
-title: Call me James
+title: James' Blog
 paginate: 5
 theme: PaperMod
 timeZone: Pacific/Auckland
@@ -12,7 +12,7 @@ minify:
   minifyOutput: true
 
 params:
-  title: Call me James
+  title: James' Blog
   description: "Blog by James Malcolm exploring machine learning, business and other analysis."
   keywords: [Blog, machine learning, business, strategy]
   author: James Malcolm
@@ -51,13 +51,13 @@ params:
     Title: "Hi there \U0001F44B"
     Content: Welcome to James Malcolm's blog. Here I share some thoughts on data, business and the combination of the two.
 
-  #socialIcons:
+  socialIcons:
   #  - name: twitter
   #    url: "https://twitter.com/"
-  #  - name: stackoverflow
-  #    url: "https://stackoverflow.com"
-  #  - name: github
-  #    url: "https://github.com/"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/malcolmjames/"
+    - name: github
+      url: "https://github.com/JamesTrick"
 
   analytics:
     google:
