@@ -57,8 +57,8 @@ OpenAI charges for both input tokens and the output tokens of an interaction. Cu
 ## Tallying the cost
 
 Now, let’s bring this all together. Since we are exploring different billing models, we need to make some assumptions:
-The average message or interaction contains words, or 200 tokens and an additional 100 tokens are used for prompting. So, 300 tokens for the input. Let’s say, you also get 300 tokens back as output tokens. Giving us a cost per message of: $0.03.
-The length of the message is largely irrelevant for the cloud deployments - and this is what helps them become economical. But, as the number of queries increases - the more demand you’ll have for multiple instances. Ensure you can scale down easily as well! For this, I didn't explore the point at which you may need scale  to additional instances.
+* The average message or interaction contains words, or 200 tokens and an additional 100 tokens are used for prompting. So, 300 tokens for the input. Let’s say, you also get 300 tokens back as output tokens. Giving us a cost per message of: $0.03.
+* The length of the message is largely irrelevant for the cloud deployments - and this is what helps them become economical. But, as the number of queries increases - the more demand you’ll have for multiple instances. Ensure you can scale down easily as well! For this, I didn't explore the point at which you may need scale  to additional instances.
 
 | # of Exchanges | OpenAI (Total Cost) | AWS (Average Cost Per) | Google Cloud (Average Cost Per) |
 |---------------:|---------------------|------------------------|---------------------------------|
