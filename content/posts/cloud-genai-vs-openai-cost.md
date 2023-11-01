@@ -15,6 +15,16 @@ In this, I want to explore three options, these are:
 2. Self-managed: Deploy using AWS
 3. Self-managed: Deploy using Google Cloud
 
+---
+### This post is part of my wider LLM series.
+
+* [Handling multiple interactions with Langchain](/posts/llm-memory/)
+* [LLM Risks - Prompt Injection](/posts/prompt-injection/)
+
+Or a full list of posts, [available here](https://jamesmalcolm.me/tags/llms/).
+
+---
+
 ## Assumptions
 
 For the best possible comparison, we compare OpenAI and Cohere to deploying and managing LLaMA 2 - perhaps the best competing commercially usable open-source model out there.

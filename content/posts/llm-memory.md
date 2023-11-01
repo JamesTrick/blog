@@ -59,19 +59,30 @@ Human: Hi, I’m James.
 Assistant: Hi James, nice to meet you. How can I help you?
 
 Human: What is my name?
+
+Assistant:
 ```
 
 Note, the Human: Assistant: formatting? This is because Claude specifically is trained using reinforcement learning with human feedback, and this is the formatting they used for their data. To get best results, Claude themselves [suggest this formatting](https://docs.anthropic.com/claude/docs/introduction-to-prompt-design):
 
+---
+### This post is part of my wider LLM series.
+
+* [Counting Pennies - Deploy or buy GenAI?](/posts/cloud-genai-vs-openai-cost/)
+* [LLM Risks - Prompt Injection](/posts/prompt-injection/)
+
+Or a full list of posts, [available here](https://jamesmalcolm.me/tags/llms/).
+
+---
 ## This is all quite… manual. How do we make it easier?
 
 Now that we understand the basic idea behind adding memory, now is a good chance to introduce Langchain and the benefit of langchain for memory.
 
 Langchain, thankfully as a solution for memory, various solutions in fact. These solutions sit within the Memory section of langchain and include:
 
-ConversationBuffer
-ConversationBufferWindow
-ConversionSummary
+* ConversationBuffer
+* ConversationBufferWindow
+* ConversionSummary
 
 And a full list is available [here](https://python.langchain.com/docs/modules/memory/types/). But what do these classes actually do?
 
@@ -87,7 +98,7 @@ To help minimise costs, the next two Langchain Memory classes come into play.
 
 ConversationBufferWindow is similar to ConversaionBuffer aside from it only keeps the last `k` interactions in memory. This is helpful if old messages are no longer helpful, but can lead to quite abrupt memory loss.
 
-ConversationSummaryMemory is the next memory I want to highlight. This memory works by using a LLM to summarise the history. This can lead to a lower input token cost due to a more condensed history, but naturally you are likely charged for the summary.
+ConversationSummaryMemory works by using a LLM to summarise the history. This can lead to a lower input token cost due to a more condensed history, but naturally you are likely charged for the summary.
 
 With both these additional solutions, you are losing detail of previous interactions that could lead to lower quality future responses. On the flip side, you are working to increase latency and decrease cost. Experimentation is key here on what works best for your solution.
 

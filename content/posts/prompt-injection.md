@@ -36,6 +36,17 @@ AI:….”*
 
 Prompts are incredibly powerful and for a lot of use-cases, they completely remove the need to fine-tune a LLM which saves on upfront cost. The accessibility of prompts is part of the reason why generative AI models are becoming so widely popular. The accessibility of prompts is also why anyone with a laptop could be a bad actor waiting to exploit your models.
 
+---
+### This post is part of my wider LLM series.
+
+* [Handling multiple interactions with Langchain](/posts/llm-memory/)
+* [Counting Pennies - Deploy or buy GenAI?](/posts/cloud-genai-vs-openai-cost/)
+
+Or a full list of posts, [available here](https://jamesmalcolm.me/tags/llms/).
+
+---
+
+
 So now that we understand what a prompt is, what is a prompt injection attack?
 [OWASP defines a prompt injection attack as](https://owasp.org/www-project-top-10-for-large-language-model-applications/descriptions/Prompt_Injection.html), “using carefully crafted prompts that make the model ignore previous instructions or perform unintended actions.”
 
