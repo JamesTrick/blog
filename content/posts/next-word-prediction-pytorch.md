@@ -1,6 +1,6 @@
 ---
 title: What's next? Next word prediction with PyTorch
-date: 2023-08-11T00:13:04Z
+date: 2023-11-08T00:13:04Z
 image: images/blog/prompt-header.jpg
 author: James Malcolm
 description: Let's build a basic next word prediction model using PyTorch and discuss the applications.
