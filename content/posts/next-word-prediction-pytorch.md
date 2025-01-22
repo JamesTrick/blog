@@ -10,20 +10,20 @@ tags:
   - pytorch
 ---
 
-Today, I will take you through a simple next-word prediction model built using [PyTorch](https://pytorch.org/). This next word prediction is based on Google's Smart Compose and is a form of language modelling. The knowledge learnt here forms the basis for larger large language models despite using a different architecture.
+Today, I will take you through a simple next-word prediction model built using [PyTorch](https://pytorch.org/). 
 
-Specifically, we draw on research published by Google for Gmail’s Smart Compose feature. Smart Compose uses a few words the user inputs and then predicts the following words or sentences in emails you want to write.
+The inspiration for this, is of course predictive text - or more specifically Google's Smart Compose. At its core, the Google Smart Compose model is a form of language model. Smart Compose uses a few words the user inputs and then predicts the following words or sentences in emails you want to write.
 
 ![](/static/images/google.gif)
 
-Google details how they build their Smart Compose feature in their [research blog post here][1]. From this, I want to pull out some key learnings and requirements:
+Google details how they build their Smart Compose feature in their [research blog post here][1]. From this, I want to pull out some requirements for building a successful Smart Compose model:
 
 * Latency. Latency is important, it must generate a response in under 100ms.
 * They explored a Sequence to sequence-style model (Seq2seq) but found it failed the latency test. Instead, they opted for a Recurrent neural network (RNN) model.
 
-You may be wondering, this blog post came out in 2018 - why am I talking about it now? Almost certainly, Google has improved their Smart Compose model and evolved from this architecture. Google also hints at that within their blog when they say *"We are constantly working on improving the suggestion quality of the language generation model by following state-of-the-art architectures (e.g., Transformer, RNMT+, etc.)"*
+Therefore, let's build a fast RNN based model to predict the next word! Now, I know that in the  age of large language models such as GPT, LLaMA or Google's on Gemma/Gemini models, these more simple applications are overlooked. However, the basis of this Smart Compose model helps us build the foundational understanding to grasp the technical details of transformers, and larger models.
 
-Nonetheless, I enjoy this application of RNN and the utility of the Smart Compose model. On top of this, understanding RNNs and having the ability to build these models will put anyone on a good footing for more advanced models such as [LLMs](/posts/llm-memory), which I explore in other posts.
+Smaller, more simple models such as these can often outperform large language models and are naturally better suited for edge applications due to their smaller size.
 
 ## Look into RNNs
 
@@ -43,6 +43,8 @@ Both, LSTM and Gated Recurrent Units (GRU, another variation on an RNN) have a m
 * Output gate
 * Forget gate.
 
+![This image compares LSTM and GRU architectures. LSTM uses forget, input, and output gates to manage cell state and memory. GRU simplifies this with reset and update gates for hidden state updates. Symbols include sigmoid, tanh, pointwise operations, and vector concatenation to depict activations and computations within each model.](https://miro.medium.com/v2/resize:fit:1400/1*yBXV9o5q7L_CvY7quJt3WQ.png)
+
 These three gates represent sigmoid layers, which control how much information can enter, leave or be forgotten within the layer.
 
 The input gate plays a role in determining which information from the current input should be stored in the cell state. By selectively controlling the update of the LSTM cell state, it discerns the relevance of new input data.
@@ -55,32 +57,42 @@ These three gates enable the LSTM cell to manage and process sequential data eff
 
 ## PyTorch Model
 
-Now, let's take a look at our model:
+Let's start now by introducing the model code, then explaining each part. For the brevity of this post, we'll skip the data loading, tokenising and training of the model. However, the accompanying Google Colab notebook has this. I use PyTorch Lightning in the notebook to abstract away some of the boilerplate code needed.
 
 ```python
 class Model(nn.Module):
-	def __init__(self, embedding_dim, hidden_dim, vocab_size):
+	def __init__(self,
+		embedding_dim: int,
+		hidden_dim: int,
+		vocab_size: int,
+		num_layers: int = 1
+	):
 		super(Model, self).__init__()
 		
 		self.hidden_dim = hidden_dim
 		self.word_embeddings = nn.Embedding(vocab_size, embedding_dim)
-		
 		# The LSTM takes word embeddings as inputs, and outputs hidden states
 		# with dimensionality hidden_dim.
-		self.lstm = nn.LSTM(embedding_dim, hidden_dim)
-		
+		self.lstm = nn.LSTM(embedding_dim, hidden_dim, num_layers, batch_first=True)
 		# The linear layer that maps from hidden state space to vocab size
-		self.hidden2tag = nn.Linear(hidden_dim, vocab_size)
+		self.fc = nn.Linear(hidden_dim, vocab_size)
 	
 	def forward(self, sentence):
 		embeds = self.word_embeddings(sentence)
-		lstm_out, _ = self.lstm(embeds)
-		tag_space = self.hidden2tag(lstm_out)
-		return tag_space
+		lstm_out, _ = self.lstm(embed)
+		output = self.fc(lstm_out[:, -1, :])
+		return output
 ```
 
-Let’s break the model down by its layers.
-
+In terms of models, this is quite a straight-forward one. With the following config, we get 65.4 million parameters:
+```python
+model_config = {
+	'embedding_dim': 128,
+	'hidden_dim': 256,
+	'num_layers': 2,
+	'vocab_size': len(vocab) # is equal to XXXX
+}
+```
 #### Embedding layer
 
 Embeddings have come to the forefront with the rise of generative AI. The role embeddings play here is in compressing the potentially mammoth vocabulary size (`vocab_size`), down to a more manageable dimension of `embed_size` dimensions.
@@ -93,41 +105,42 @@ The next layer is our LSTM layer; this is the PyTorch implementation of what we 
 
 #### Linear Layer
 
-This dense linear layer takes the output from our LSTM layer and outputs it a size `vocab_size` so we can apply a softmax function to get the probabilities for each word in `vocab_size` to get the highest ranked word.
+This final layer is our fully connected linear layer. The input of size of this model is our `hidden_dim` from our LSTM layer, and the output size is our `vocab_size`.
+
+Put another way, we are trying to predict the next word given our known `vocab_size`. This linear layer outputs logits, which we can then pass through into a softmax function to transform into probabilities.
 
 ## Predicting the next word.
 
 Finally, I want to get into the `predict` function. The code is presented below.
 
-
 ```python
-	def predict(prompt: str, max_seq_len: int, temperature: float, model, tokenizer, vocab, device, seed=None):
-		if seed is not None:
-			torch.manual_seed(seed)
-			
-		model.eval()
-		tokens = tokenizer(prompt)
-		indices = [vocab[t] for t in tokens]
-		batch_size = 1
+def predict(prompt: str, max_seq_len: int, temperature: float, model, tokenizer, vocab, device, seed=None):
+	if seed is not None:
+		torch.manual_seed(seed)
 		
-		with torch.no_grad():
-			for i in range(max_seq_len):
-				src = torch.LongTensor([indices]).to(device)
-				prediction = model(src)
-				probs = torch.softmax(prediction[:, -1] / temperature, dim=-1)
-				prediction = torch.multinomial(probs, num_samples=1).item() # take one sample from the distribution
-				while prediction == vocab['<unk>']:
-					prediction = torch.multinomial(probs, num_samples=1).item()
-				
-				if prediction == vocab['<eos>']:
-					break
-				indices.append(prediction)
-				
-			itos = vocab.get_itos()
+	model.eval()
+	tokens = tokenizer(prompt)
+	indices = [vocab[t] for t in tokens]
+	batch_size = 1
+	
+	with torch.no_grad():
+		for i in range(max_seq_len):
+			src = torch.LongTensor([indices]).to(device)
+			prediction = model(src)
+			probs = torch.softmax(prediction[:, -1] / temperature, dim=-1)
+			prediction = torch.multinomial(probs, num_samples=1).item()
+			while prediction == vocab['<unk>']:
+				prediction = torch.multinomial(probs, num_samples=1).item()
 			
-			tokens = [itos[i] for i in indices]
+			if prediction == vocab['<eos>']:
+				break
+			indices.append(prediction)
 			
-			return tokens
+		itos = vocab.get_itos()
+		
+		tokens = [itos[i] for i in indices]
+		
+		return tokens
 ```
 
 In this function, we have a `prompt`; this could be the start of the sentence. We have a `max_seq_len` argument that limits the number of words generated. That is to say, this function will keep predicting the following words until `max_seq_len` is met or the model itself predicts `<eos>`, indicating that the text has finished.
@@ -151,7 +164,6 @@ You can re-create this by adding two separate embedding layers within your model
 class Model(nn.Module):
 	def __init__(self):
 		super(Model, self).__init__()
-	
 		subject_embedding = nn.Embedding(subject_size, embedding_dim)
 		prev_embedding = nn.Embedding(prev_size, embedding_dim)
 		...
