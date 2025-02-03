@@ -51,7 +51,11 @@ The interplay between these two reward functions is crucial. They teach the mode
 
 ### Leveraging GRPOTrainer from HuggingFace
 
-The HuggingFace team quickly embraced Deepseek’s innovation by implementing a `GRPOTrainer` in their `trl` library. The trainer allows you to combine multiple reward functions. For example:
+The HuggingFace team quickly embraced Deepseek’s innovation by implementing a `GRPOTrainer` in their `trl` library.
+
+You're not limited to format and accuracy reward functions, instead you sould look to design reward functions that suit your needs. For example MLX, customise their reward functions to give partial credit for including each xml tag in the format. Others assign reward for the length of format.
+
+`GRPOTrainer` is flexible for this, in allowing you to combine an arbitrary amount of reward functions. And the total reward is the sum of the of the outputs from the reward functions.
 
 ```python
 trainer = GRPOTrainer(
