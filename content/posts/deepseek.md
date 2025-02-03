@@ -1,6 +1,6 @@
 ---
 title: Learning and applying Deepseek techniques
-date: 2023-06-15T02:13:04Z
+date: 2025-02-01T02:13:04Z
 author: James Malcolm
 description: Explore what makes Deepseek unique and how to apply the same techniques to smaller open source models such as Google's Gemma.
 tags:
@@ -53,12 +53,12 @@ The interplay between these two reward functions is crucial. They teach the mode
 
 The HuggingFace team quickly embraced Deepseek’s innovation by implementing a `GRPOTrainer` in their `trl` library. The trainer allows you to combine multiple reward functions. For example:
 
-python
-
-CopyEdit
-
-`trainer = GRPOTrainer(     reward_funcs=[accuracy_func, format_func, length_func, ...],     # additional parameters )`
-
+```python
+trainer = GRPOTrainer(
+  reward_funcs=[accuracy_func, format_func, length_func, ...],
+  # additional parameters
+)
+```
 A few important notes regarding the reward functions:
 
 - **Input Format:**  
