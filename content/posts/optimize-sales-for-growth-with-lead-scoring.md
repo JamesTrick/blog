@@ -57,8 +57,6 @@ When resources aren't constrained, lead scores can help guide conversations to g
 
 A good example of this is contacting higher ranked leads without the ‘Close’ mentality, but instead steer the conversation to upsell or to create loyalty to help aid retention effects.
 
-{{< subscribe >}}
-
 ## **How do you build a Lead Score model?**
 
 There is often a desire and pressure to have advanced predictive models targeted towards conversions. However, these require expertise, time and infrastructure that is beyond smaller businesses. They’re certainly useful if you have the resource, and deserve posts on their own.

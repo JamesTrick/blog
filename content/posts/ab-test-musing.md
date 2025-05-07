@@ -32,5 +32,3 @@ There’s an overhead to testing, I’d say the guidelines for testing would be:
 * If the potential payoff is low, testing can still happen, but you should try minimise the cost and time of the test.
 
 Join me next time for some random statistics musings. Perhaps I’ll go into the truly [elegant math](/posts/bayesian-ab-testing-pyro/) behind testing…
-
-{{< subscribe  heading="Want more statistically musings? Subscribe below.">}}

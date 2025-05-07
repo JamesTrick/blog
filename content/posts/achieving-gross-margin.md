@@ -37,8 +37,6 @@ All the companies in this cluster performed well, and, on average, performed bet
 
 Revenue growth difference was smaller, likely due to the restrained spend of Sales and Marketing expenditure.
 
-{{< subscribe  heading="Want more business analysis? Subscribe below.">}}
-
 ## **The role Gross Margin plays**
 
 By definition Gross margin is an efficiency metric. From this analysis, we can view it more as a health check metric. In my mind Gross margin should never be a target, but instead is a scorecard of operational discipline.

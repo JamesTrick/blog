@@ -94,8 +94,6 @@ You may notice, that we haven’t specified `flask run` or any equivalent comman
 
 We also want to it to be started alongside our nginx container when. So we’ll be doing this when we configure Docker Compose later on.
 
-{{< subscribe heading="Like this post? Subscribe below.">}}
-
 ### nginx
 
 nginx in our case replaces the default Flask webserver and is significantly more scalable and production-ready than Flask’s built in server.

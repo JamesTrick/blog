@@ -34,8 +34,6 @@ High LVR loans are more likely to default in economic downturns as it takes a sm
 
 By limiting lending, it does also have an indirect effect on potentially slowing down house demand by requiring Investors and Owner-occupiers to have a higher deposit, or making it harder for low deposit mortgages to get approved. This can, conceptually at least, lead to a slowing in house prices.
 
-{{< subscribe  heading="Like this post? Subscribe below.">}}
-
 ## So why is the Reserve Bank signaling the re-introduction?
 
 Removing the LVR speed limits were in response to COVID in an attempt to keep money flowing through the economy. And well, the effects of COVID hasn’t seemed to have slowed down the property market. In fact, it’s been the opposite.
