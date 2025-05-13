@@ -1,3 +1,8 @@
 public
 node_modules
 notebooks
+.DS_STORE
+.hugo_build.lock
+config/.DS_Store
+content/.DS_Store
+content/static/.DS_Store
