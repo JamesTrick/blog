@@ -5,13 +5,13 @@ summary: "When you cannot update model weights, the prompt is your main lever. H
 tags: ["LLM", "prompt engineering", "DSPy", "agents", "machine learning"]
 ---
 
-Building LLM powered agents involves a lot of prompt engineering. You write instructions, test them, tweak them, test again. The cycle repeats until the agent behaves acceptably. Then the model provider ships an update, and some of that behaviour breaks. Repeat.
+A common entrypoint when building LLM powered agents is prompt engineering. You write instructions, test them, tweak them, test again. The cycle repeats until the agent behaves the way you want. Then a new model comes out, or user-behaviour starts to drift from reality. Test. Ship. Break. Update. Repeat.
 
 There has to be a better way.
 
 What if the prompt could improve itself? What if, instead of manually tweaking instructions, we could automate the whole process and let an optimisation loop find better prompts for us?
 
-This post explores exactly that idea. I will walk through how DSPy approaches automatic prompt optimisation, why I cannot use it directly for my agent, and how I adapted its core principles into a critique loop that works with my existing stack.
+This post explores exactly that idea. I will walk through how DSPy approaches automatic prompt optimisation, why I cannot use it directly for my PydanticAI agent, and how I adapted its core principles into a critique loop that works with my existing stack.
 
 ## The constraint
 
@@ -99,7 +99,7 @@ optimized_program = optimizer.compile(haiku_bot, trainset=train, valset=val)
 
 ## Why DSPy does not fit my stack
 
-DSPy is excellent, but I cannot practically use it for my agent. Here is why.
+DSPy is excellent, but I cannot practically use it for my PydanticAI agent. Here is why.
 
 **DSPy requires rewriting my agent as a DSPy program.** DSPy owns the full pipeline. Signatures, modules, tool calls, agent routing. My agent is built on PydanticAI, which has a fundamentally different architecture. PydanticAI uses Pydantic models for structured outputs, dependency injection for tools, and a different agent lifecycle. Porting to DSPy would mean rewriting the entire application, not just the prompt.
 
@@ -126,7 +126,7 @@ What I adapt for my stack:
 * The agent under test is my real PydanticAI agent.
 * Scoring works against golden test cases, not DSPy Example objects.
 
-The loop looks like this:
+The general loop looks like this:
 
 ```python
 for iteration in n_iters:
