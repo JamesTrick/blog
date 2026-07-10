@@ -1,0 +1,6 @@
+<details class="post-collapse">
+  <summary>{{ .Get "summary" | default "Details" }}</summary>
+  <div class="post-collapse-content">
+    {{ .Inner | markdownify }}
+  </div>
+</details>
