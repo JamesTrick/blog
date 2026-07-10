@@ -1,12 +1,13 @@
 +++
 date = 2020-10-21T23:06:57Z
-description = "Adrian Orr, Governer of Reserve Bank of New Zealand contemplates the re-introduction of LVR measures. We explore the history and effect of this statment."
+description = "Adrian Orr, Governor of Reserve Bank of New Zealand contemplates the re-introduction of LVR measures. We explore the history and effect of this statement."
 hasMath = false
 slug = "effect-loan-to-value"
 tags = ["economics"]
 title = "The Effect of Loan to Value Ratios"
 
 +++
+
 ![Ships in Wellington, with a background of Houses.](/static/graphs/ships-in-the-bay-in-wellington-new-zealand.jpg)
 
 The Reserve Bank of New Zealand (RBNZ) Governor, Adrian Orr, [signaled this week](https://www.interest.co.nz/news/107616/adrian-orr-says-rbnz-seeing-early-signs-house-prices-being-driven-high-leverage-loans) that the central bank may soon be looking at the prospect of re-introducing Loan to Value ratio (LVR) limits in New New Zealand.
@@ -40,7 +41,7 @@ Removing the LVR speed limits were in response to COVID in an attempt to keep mo
 
 Both housing sales and median house prices are at all-time highs. [REINZ reports](https://www.reinz.co.nz/Media/Default/Statistic%20Documents/2020/September/REINZ%20Residential%20Press%20Release%20-%20September%202020.pdf) that _“the number of residential properties sold in September across New Zealand increased by 37.1% from the same time last year (from 6,112 to 8,377) – the highest number of properties sold in a month in New Zealand for 42 months (March 2017)”_
 
-With soaring housing numbers, there has been a significant increase to in the amounts of high LVR lending. This property growht can't be solely attributed to the removal of LVR speed limits, it is also fueled by the incredibly low interest rates, making it a more appealing choice for consumers to increase debt.
+With soaring housing numbers, there has been a significant increase to in the amounts of high LVR lending. This property growth can't be solely attributed to the removal of LVR speed limits, it is also fueled by the incredibly low interest rates, making it a more appealing choice for consumers to increase debt.
 
 The Reserve Bank has also noted that the activity is driven becoming concerned of this primarily because it appears as though most of the activity is driven by investors – which is what the Loan to Value ratios are geared towards preventing or at least slowing down.
 

@@ -1,4 +1,5 @@
 baseURL: 'https://jamesmalcolm.me/'
+canonifyURLs: true
 googleAnalytics: G-V3TJ1V7BX1
 buildDrafts: false
 buildFuture: false
@@ -8,14 +9,3 @@ disqusShortname: jamesmalcolm
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   comments: true
-
-deployment:
-  targets:
-    - name: jamesmalcolm.me
-      URL: 's3://jamesmalcolm.me?region=ap-southeast-2'
-  matchers:
-    - pattern: ^.+\.(js|css|png|jpg|gif|svg|ttf)$
-      cacheControl: 'max-age=630720000, no-transform, public'
-      gzip: true
-    - pattern: ^.+\.(html|xml|json)$
-      gzip: true

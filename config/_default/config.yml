@@ -6,7 +6,7 @@ timeZone: Pacific/Auckland
 
 enableRobotsTXT: true
 buildExpired: false
-canonifyURLs: true
+canonifyURLs: false
 
 minify:
   disableXML: true
@@ -22,6 +22,7 @@ params:
   defaultTheme: auto # dark, light
   disableThemeToggle: false
 
+  ShowPageNums: true
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
@@ -121,4 +122,3 @@ outputs:
         - HTML
         - RSS
         - JSON # is necessary
-timeZone: Pacific/Auckland
